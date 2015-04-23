@@ -1,0 +1,27 @@
+===== 47 ====================================
+POST http://m.qunachi.com/act/2014/scratchcard.php?do=lucky HTTP/1.1
+Host: m.qunachi.com
+Accept: */*
+Proxy-Connection: keep-alive
+Accept-Language: zh-cn
+Content-Type: application/x-www-form-urlencoded
+Origin: http://m.qunachi.com
+Content-Length: 46
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12F70 Paros/3.2.13
+Referer: http://m.qunachi.com/act/2014/scratchcard.php
+Cookie: _cid=2%7C%E5%8C%97%E4%BA%AC; HDid=4i7v7o9e7susd3t67tmur4h5261429664885741; HDSSID=s5u6oeeqo3lsng10uic8af0282; Hm_lvt_971feb023ae0e0bf8f910181083790ea=1429664886; sign=miD5XSnCfGtwTmzqO1dZixyWS%2F7IWKXhYlxASi5ncKXiPNmT1i%2FNGdh4V9TOJWrEj5b%2BN3yZ%2FeRw4e%2B%2FnOpELq2upzSiQEv89e7PU9YqdbQiK0on%2Brj7FTbQJTGuu2WfMtuu9c6EZn7CAczwmxRPodRZ0dr2WqrDBdbT9J0PcxM%3D; uid=7462017
+
+token=701cf92075fcbb164afe1f21a2e3350c&prize=4
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 22 Apr 2015 07:22:34 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-hd: q51
+
+{"code":0,"msg":"\u64cd\u4f5c\u6210\u529f","remain":1,"prize":{"id":4,"name":"\u672a\u4e2d\u5956"}}
+

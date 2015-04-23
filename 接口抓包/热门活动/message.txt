@@ -1,0 +1,21 @@
+===== 43 ====================================
+GET http://api.qunachi.com/v5.2.0/Act/Hot/getList?appid=1&hash=79d9681bc70476286a0b3bcac997f78f&deviceid=172fe65995535e9670307f288722585&channel=appstore&cid=2&limit=20&offset=0 HTTP/1.1
+Host: api.qunachi.com
+Accept: */*
+Connection: keep-alive
+Proxy-Connection: keep-alive
+Cookie: HDSSID=f60fd8b3d83e82e24f39a87d77e8d37624163f9c7c5482c49e84e4c91218794c1af76846cb20f77e; _cid=2%7C%E5%8C%97%E4%BA%AC; HDid=4i7v7o9e7susd3t67tmur4h5261429664885741; Hm_lvt_971feb023ae0e0bf8f910181083790ea=1429664886
+User-Agent: FindEat_iPhoneV5/5.2.0 (iPhone; iOS 8.3; Scale/2.00),iPhone 5s:8.3:WIFI Paros/3.2.13
+Accept-Language: zh-Hans;q=1
+AUTH: f60fd8b3d83e82e24f39a87d77e8d37624163f9c7c5482c49e84e4c91218794c1af76846cb20f77e
+
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 22 Apr 2015 07:21:30 GMT
+Content-Type: application/json
+Connection: keep-alive
+X-hd: q51
+
+{"status":200,"result":{"Count":1,"List":[{"Id":"4","Title":"\u8f6c\u8fd0\u522e\u522e\u5361","Desc":"\u8fd8\u5acc\u8fd0\u6c14\u4e0d\u591f\u597d\uff1f\u522e\u522e\u5361\u8ba9\u4f60\u7acb\u9a6c\u8f6c\u8fd0\uff0c\u79d2\u53d8\u9ad8\u5bcc\u5e05\uff01","Time":"2015-04-30 15:30:00","Image":"http:\/\/qnc2.hoto.cn\/mobile\/act\/201410\/1413185942.jpg","UserCount":3310,"Status":1,"WapUrl":"http:\/\/m.qunachi.com\/act\/2014\/scratchcard.php"}]}}
+

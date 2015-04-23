@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  Qunachi
+//
+//  Created by qianfeng on 15-4-22.
+//  Copyright (c) 2015年 zyc. All rights reserved.
+//
+
+#ifndef Qunachi_PrefixHeader_pch
+#define Qunachi_PrefixHeader_pch
+
+
+
+
+#import "OKTools.h"
+
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define WELCOME_IMAGE_NAME @"welcome.jpg"
+
+
+#endif

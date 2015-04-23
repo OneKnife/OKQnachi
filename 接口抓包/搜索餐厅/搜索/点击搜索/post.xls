@@ -1,0 +1,7 @@
+http://api.qunachi.com/v5.2.0/Search/Shop/getShopList
+	limit	20
+	keyword	%E7%BE%8E%E9%A3%9F
+	sort	3
+	cityid	2
+	offset	0
+	dist	0

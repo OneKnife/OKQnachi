@@ -1,0 +1,9 @@
+http://api.qunachi.com/v5.2.0/Mobile/Feature/getList
+	limit	20
+	type	0
+	deviceid	172fe65995535e9670307f288722585
+	channel	appstore
+	appid	1
+	hash	acc2b424a4e5454279444a8ea38f2198
+	offset	0
+	cid	2

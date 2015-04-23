@@ -1,0 +1,25 @@
+===== 51 ====================================
+GET http://api.qunachi.com/v5.2.0/Center/User/discoverFriends?appid=1&hash=ccb002bd39ec37d1c4fff523a59ee9ad&deviceid=172fe65995535e9670307f288722585&channel=appstore&cid=2&limit=20&offset=0 HTTP/1.1
+Host: api.qunachi.com
+Accept: */*
+Connection: keep-alive
+Proxy-Connection: keep-alive
+Cookie: HDSSID=f60fd8b3d83e82e24f39a87d77e8d37624163f9c7c5482c49e84e4c91218794c1af76846cb20f77e; _cid=2%7C%E5%8C%97%E4%BA%AC; HDid=4i7v7o9e7susd3t67tmur4h5261429664885741; HDSSID=s5u6oeeqo3lsng10uic8af0282; Hm_lvt_971feb023ae0e0bf8f910181083790ea=1429664886; sign=miD5XSnCfGtwTmzqO1dZixyWS%2F7IWKXhYlxASi5ncKXiPNmT1i%2FNGdh4V9TOJWrEj5b%2BN3yZ%2FeRw4e%2B%2FnOpELq2upzSiQEv89e7PU9YqdbQiK0on%2Brj7FTbQJTGuu2WfMtuu9c6EZn7CAczwmxRPodRZ0dr2WqrDBdbT9J0PcxM%3D; uid=7462017
+User-Agent: FindEat_iPhoneV5/5.2.0 (iPhone; iOS 8.3; Scale/2.00),iPhone 5s:8.3:WIFI Paros/3.2.13
+Accept-Language: zh-Hans;q=1
+AUTH: f60fd8b3d83e82e24f39a87d77e8d37624163f9c7c5482c49e84e4c91218794c1af76846cb20f77e
+
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 22 Apr 2015 07:23:47 GMT
+Content-Type: application/json
+Connection: keep-alive
+Set-Cookie: HDSSID=f60fd8b3d83e82e24f39a87d77e8d37624163f9c7c5482c49e84e4c91218794c1af76846cb20f77e; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-hd: q51
+
+{"status":200,"result":{"Count":3,"List":[{"UserId":2991202,"UserName":"\u6240\u8c13\u4f0a\u4eba\u4e36","AvatarUrl":"http:\/\/head0.hoto.cn\/62\/a4\/2991202_70.jpg?v=1","FansCount":132,"FollowCount":308,"ShareCount":512,"VipType":9,"VipLevel":1,"VipIcoUrl":"http:\/\/qnc1.hoto.cn\/mobile\/goeat.3.3\/icoViprank1.png?v=3"},{"UserId":3038597,"UserName":"\u72ee\u5b50\u5988\u5988","AvatarUrl":"http:\/\/head1.hoto.cn\/85\/5d\/3038597_70.jpg?v=1","FansCount":151,"FollowCount":999,"ShareCount":881,"VipType":9,"VipLevel":1,"VipIcoUrl":"http:\/\/qnc1.hoto.cn\/mobile\/goeat.3.3\/icoViprank1.png?v=3"},{"UserId":2863737,"UserName":"\u7c73\u5170\u82b1\u513f","AvatarUrl":"http:\/\/head1.hoto.cn\/79\/b2\/2863737_70.jpg?v=2","FansCount":451,"FollowCount":490,"ShareCount":2822,"VipType":9,"VipLevel":3,"VipIcoUrl":"http:\/\/qnc1.hoto.cn\/mobile\/goeat.3.3\/icoViprank3.png?v=3"}]}}
+

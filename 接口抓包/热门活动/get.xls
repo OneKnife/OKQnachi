@@ -1,0 +1,8 @@
+http://api.qunachi.com/v5.2.0/Act/Hot/getList
+	limit	20
+	deviceid	172fe65995535e9670307f288722585
+	channel	appstore
+	appid	1
+	hash	79d9681bc70476286a0b3bcac997f78f
+	offset	0
+	cid	2

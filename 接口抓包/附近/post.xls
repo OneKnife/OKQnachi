@@ -1,0 +1,9 @@
+http://api.qunachi.com/v5.2.0/Search/Shop/getShopList
+	limit	20
+	lng	116.376518
+	sort	1
+	lat	40.043353
+	cityid	2
+	offset	0
+	dist	0
+	distance	500

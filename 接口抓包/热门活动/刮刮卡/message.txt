@@ -1,0 +1,156 @@
+===== 44 ====================================
+GET http://m.qunachi.com/act/2014/scratchcard.php HTTP/1.1
+Host: m.qunachi.com
+x-from: qunachi-ios
+Cookie: _cid=2%7C%E5%8C%97%E4%BA%AC; HDid=4i7v7o9e7susd3t67tmur4h5261429664885741; Hm_lvt_971feb023ae0e0bf8f910181083790ea=1429664886; sign=miD5XSnCfGtwTmzqO1dZixyWS%2F7IWKXhYlxASi5ncKXiPNmT1i%2FNGdh4V9TOJWrEj5b%2BN3yZ%2FeRw4e%2B%2FnOpELq2upzSiQEv89e7PU9YqdbQiK0on%2Brj7FTbQJTGuu2WfMtuu9c6EZn7CAczwmxRPodRZ0dr2WqrDBdbT9J0PcxM%3D; uid=7462017
+Connection: keep-alive
+Proxy-Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12F70 Paros/3.2.13
+Accept-Language: zh-cn
+AUTH: f60fd8b3d83e82e24f39a87d77e8d37624163f9c7c5482c49e84e4c91218794c1af76846cb20f77e
+
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 22 Apr 2015 07:22:01 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Set-Cookie: HDSSID=s5u6oeeqo3lsng10uic8af0282; path=/; domain=.qunachi.com
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-hd: q51
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link type="text/css" rel="stylesheet" href="http://qnc1.hoto.cn/mobile/scratch_cards/style.css?v=4" />
+	<title>??????????</title>
+	<meta name="keywords" content="???" />
+	<meta name="description" content="?????????????????????????????????" />
+</head>
+
+<body>
+	<div class="box da_body">
+		<div id="main"><canvas id="myCanvas"></canvas><i id="imask"></i></div>
+		<h2>????<a href="http://m.qunachi.com/tools/share.php?title=%E5%8E%BB%E5%93%AA%E5%90%83%E8%BD%AC%E8%BF%90%E5%88%AE%E5%88%AE%E5%8D%A1%E6%B4%BB%E5%8A%A8&url=http%3A%2F%2Fm.qunachi.com%2Fact%2F2014%2Fscratchcard.php&pic=http%3A%2F%2Fqnc1.hoto.cn%2Fmobile%2Fscratch_cards%2Fggkwbfx.jpg" class="btn">????<i>&nbsp;</i></a></h2>
+		<p><span><b>1.</b>????????</span><span><b>2.</b>????????????????????????</span><span><b>3.</b>???????????????</span></p>
+		<div class="copyRight">help@qunachi.com???????????<br />??????????????????</div>
+	</div>
+
+	<div id="floating_layer" style="display:none">
+		<div class="lay_send_gifts" id="dlg_1">
+					<h2>????</h2>			<p>
+																	<strong>????????</strong><br /><span>???<b>1</b>?????</span>
+															</p>
+			<div class="btnDiv">
+											<a href="javascript:;" class="btn_orange">????</a>
+										</div>
+				</div>
+	</div>
+
+<script type="text/javascript">
+var LK = eval('(({"code":0,"msg":"\u64cd\u4f5c\u6210\u529f","remain":2,"prize":{"id":4,"name":"\u672a\u4e2d\u5956"},"token":"701cf92075fcbb164afe1f21a2e3350c","u":"7462017","app":1}))'), act_state = 0;
+</script>
+<script type="text/javascript" src="http://qnc1.hoto.cn/min/?js=mobile/act/2014/scratchcard.js&v=1,0,1413182334"></script>
+</body>
+</html>
+
+===== 45 ====================================
+GET http://qnc1.hoto.cn/mobile/scratch_cards/style.css?v=4 HTTP/1.1
+Host: qnc1.hoto.cn
+Connection: keep-alive
+Proxy-Connection: keep-alive
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12F70 Paros/3.2.13
+Accept-Language: zh-cn
+Referer: http://m.qunachi.com/act/2014/scratchcard.php
+
+
+HTTP/1.1 200 OK
+Date: Wed, 22 Apr 2015 07:22:05 GMT
+Server: nginx
+Content-Type: text/css
+Content-Length: 3068
+Last-Modified: Fri, 17 Oct 2014 03:02:48 GMT
+ETag: "544086d8-bfc"
+X-hd: 67
+Accept-Ranges: bytes
+X-Via: 1.1 xjzh194:8111 (Cdn Cache Server V2.0), 1.1 wt197:0 (Cdn Cache Server V2.0)
+Connection: keep-alive
+
+@charset "utf-8";
+/* reset */
+*{margin:0;padding:0;outline:none;background:transparent;border:0 none;text-align:justify;text-justify:inter-ideograph}
+body{padding:0;background:#0db477;border:0;margin:0;color:#333;font:16px/1.5 "????","??" arial, \5b8b\4f53}
+ul ,ol, li{list-style:none}
+h1, h2, h3, h4, h5, h6, cite, em, strong, b, i{font-weight:normal;font-style:normal}
+.fl{float:left}
+.fr{float:right}
+img{vertical-align:top}
+.box{width:100%}
+
+/* color */
+a,a:link{color:#fff;text-decoration:none}
+a:hover{color:#333;text-decoration:none}
+
+/* main */
+.da_body{padding-top:34%;background:url(midight_bg.jpg) no-repeat top center #0db477;background-size:100%}
+.da_body #myCanvas{position:absolute;z-index:0;left:2%;top:5%}
+.da_body #main,
+.da_body #main i{width:90%;padding:3% 0;margin:0 auto;background:url(main_bg.png) no-repeat 0 0;background-size:100% auto}
+.da_body #main i{display:block;padding:0;background:url(up.png) no-repeat 0 0;background-size:100% auto;position:absolute;z-index:3;left:2%;top:5%}
+.da_body #main{padding-top:52%;position:relative;z-index:0}
+.da_body h2{position:relative;z-index:0;padding:2% 0 3%;margin:0 5%;clear:both;border-bottom:1px solid #099964;font:700 17px/20px "????",\5b8b\4f53;color:#fff}
+.da_body h2 a.btn{display:block;position:absolute;top:6px;right:2px;height:28px;padding:0 8px;border:1px solid #fff;border-radius:5px;margin-top:-5px;font:14px/28px "????","??";color:#fff}
+.da_body h2 a.btn i{display:inline-block;width:12px;height:17px;vertical-align:middle;background:url(ico_share.png) no-repeat 0 0;background-size:100%;margin:-3px 0 0 3px}
+.da_body p{border-top:1px solid #3dc392;padding-top:3%;margin:0 5%;color:#fff;font-size:14px}
+.da_body p span{display:block;padding-left:20px}
+.da_body p span b{display:block;float:left;width:20px;height:10px;margin:1px 0 0 -20px}
+.da_body .copyRight{padding-top:30px;width:100%;text-align:center;font-size:12px;color:#005d3b}
+
+
+/* layer */
+.lay_send_gifts{width:78%;background:#fff;padding:5%;border-radius:15px}
+.lay_send_gifts h2{padding:2% 0 1%;font:700 20px "????",\5b8b\4f53;text-align:center;position:relative;z-index:0}
+.lay_send_gifts h2 img{position:absolute;top:-40%;left:5%;z-index:3;width:80%;background:url(img_streamer.png) no-repeat 0 0;background-size:100%;margin-top:-10%}
+.lay_send_gifts p{padding:2% 5%;text-align:center;font-family:'????'}
+.lay_send_gifts p strong{font-weight:700}
+.lay_send_gifts p span{font-size:14px}
+.lay_send_gifts p span b{color:#ff921d;font-weight:700;padding:0 5px}
+.lay_send_gifts .btnDiv{width:100%;padding:3% 0;overflow:hidden;clear:both;text-align:center}
+.lay_send_gifts .btnDiv a{display:inline-block;padding:3% 9%;border-radius:25px;font:700 16px/1.5 "????",\5b8b\4f53}
+.lay_send_gifts .btnDiv a.btn_orange{background:#ff7200;margin-left:5%}
+.lay_send_gifts .btnDiv a.btn_orange:hover{background:#ff4e00;color:#fff}
+#floating_layer{display:none;width:100%;position:fixed;top:0;left:0;z-index:20;background:rgba(0,0,0,.5)}
+
+
+
+===== 46 ====================================
+GET http://qnc1.hoto.cn/min/?js=mobile/act/2014/scratchcard.js&v=1,0,1413182334 HTTP/1.1
+Host: qnc1.hoto.cn
+Connection: keep-alive
+Proxy-Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12F70 Paros/3.2.13
+Accept-Language: zh-cn
+Referer: http://m.qunachi.com/act/2014/scratchcard.php
+
+
+HTTP/1.1 200 OK
+Date: Wed, 22 Apr 2015 07:22:05 GMT
+Server: nginx
+Content-Type: text/javascript; charset=utf-8
+Last-Modified: Wed, 22 Apr 2015 07:22:11 GMT
+Expires: Wed, 22 Apr 2015 08:22:11 GMT
+Cache-Control: max-age=3600
+X-hd: 67
+X-Via: 1.1 xjzh194:8111 (Cdn Cache Server V2.0), 1.1 wt199:1 (Cdn Cache Server V2.0)
+Connection: keep-alive
+
+/*!2015-04-22 15:22:11 merge: js/mobile/act/2014/scratchcard.js!*/
+;(function(){var prizing=false,prized=false,_remain=LK.remain;window.onload=function(){var img_path='http://'+location.hostname+'/public/css/act/2014/scratch_cards/',pmap={1:0,2:0,3:0,4:1},prize=LK.prize||{id:4},lock=0,mouseDown=false,backimage={'url':img_path+'pic'+pmap[prize.id]+'.png','img':null},mark={'url':img_path+'up.png','img':null},canvas={'temp':null,'draw':null,rows:0,cols:0},words_scale=[[145/375,75/ 190], [235/375,100/190]],words_range=[],mainctx,tempctx,main,inited=false,_active_is_pending=act_state==1,_active_is_over=act_state==2;function recompositeCanvases(){main=document.getElementById('myCanvas');tempctx=canvas.temp.getContext('2d');mainctx=main.getContext('2d');canvas.temp.width=canvas.temp.width;tempctx.drawImage(canvas.draw,0,0);tempctx.globalCompositeOperation='source-atop';tempctx.drawImage(backimage.img,0,0,canvas.draw.width,canvas.draw.height);mainctx.drawImage(mark.img,0,0,canvas.draw.width,canvas.draw.height);mainctx.drawImage(canvas.temp,0,0);if(canvas.rows==0){var data=mainctx.getImageData(0,0,canvas.draw.width,canvas.draw.height).data,_cols=canvas.draw.width,_len=data.length/4,_rows=_len/_cols;canvas.rows=_rows;canvas.cols=_cols;words_range=[[Math.round(words_scale[0][0]*_cols),Math.round(words_scale[0][1]*_rows)],[Math.round(words_scale[1][0]*_cols),Math.round(words_scale[1][1]*_rows)]]}inited=true}function scratch(canv,x,y,fresh){var ctx=canv.getContext('2d');ctx.lineWidth=window.innerWidth/20;ctx.lineCap=ctx.lineJoin='round';if(fresh){ctx.beginPath();ctx.moveTo(x+0.01,y)}ctx.lineTo(x,y);ctx.stroke()}function setupCanvases(){var c=document.getElementById('myCanvas');var imask=document.getElementById('imask');c.width=window.innerWidth*0.86;c.height=window.innerWidth*0.44;imask.style.width=window.innerWidth*0.86+'px';imask.style.height=window.innerWidth*0.44+'px';canvas.temp=document.createElement('canvas');canvas.draw=document.createElement('canvas');canvas.temp.width=canvas.draw.width=c.width;canvas.temp.height=canvas.draw.height=c.height;mark.img=new Image();mark.img.onload=function(){inited=true;recompositeCanvases()};mark.img.onerror=function(){mark.img.onload=function(){}};mark.img.src=mark.url;function mousedown_handler(e){if(win_locked){return false}if(!_act_state_tip()){return false}if(LK.u<=0){if(act_state==0){_login_tip()}return false}if(prized){return false}if(LK.remain==0){_remain_tip();return false}var local=getLocalCoords(c,e);mouseDown=true;scratch(canvas.draw,local.x,local.y,true);if(!lock)recompositeCanvases();if(e.cancelable)e.preventDefault();return false};function mousemove_handler(e){if(!mouseDown){return true}var local=getLocalCoords(c,e);scratch(canvas.draw,local.x,local.y,false);if(!lock)recompositeCanvases();if(e.cancelable)e.preventDefault();return false};function mouseup_handler(e){if(mouseDown){mouseDown=false;if(e.cancelable){e.preventDefault()}var data=mainctx.getImageData(0,0,canvas.draw.width,canvas.draw.height).data,_cols=canvas.cols,_rows=canvas.rows,i=0,j=0,bj=0,row,col,idx,min_area=canvas.draw.width*canvas.draw.height*0.28,min_word_area=(words_range[1][1]-words_range[0][1])*(words_range[1][0]-words_range[0][0])*0.128;var local=getLocalCoords(c,e);for(;i<data.length;i+=4){if(data[i]==255&&data[i+1]==255&&data[i+2]==255&&data[i+3]==255){idx=i/4;col=idx%_cols;row=(idx-col)/_cols;if(col>=words_range[0][0]&&col<=words_range[1][0]&&row>=words_range[0][1]&&row<=words_range[1][1]){if((++bj)>=min_word_area){break}}if((++j)>=min_area){break}}}if(j>=min_area||bj>=min_word_area){setTimeout(function(){_lucky_tip();mainctx.clearRect(0,0,canvas.draw.width,canvas.draw.height);mainctx.drawImage(backimage.img,0,0,canvas.draw.width,canvas.draw.height);lock=1},150)}return false}return true};var hidden=false;function _hide_mask(e){if(hidden){return true}hidden=true;this.style.display='none';mousedown_handler.call(c,e);imask.removeEventListener('mousedown',_hide_mask,false);imask.removeEventListener('touchstart',_hide_mask,false);return true}imask.addEventListener('mousedown',_hide_mask,false);imask.addEventListener('touchstart',_hide_mask,false);c.addEventListener('mousedown',mousedown_handler,false);window.addEventListener('mousemove',mousemove_handler,false);window.addEventListener('mouseup',mouseup_handler,false);c.addEventListener('touchstart',mousedown_handler,false);window.addEventListener('touchmove',mousemove_handler,false);window.addEventListener('touchend',mouseup_handler,false);setTimeout(function(){if(!inited){var retry=0;(function _init(){if(++retry<=3&&!inited){recompositeCanvases();setTimeout(_init,30)}})()}},20)}backimage.img=new Image();backimage.img.addEventListener('load',setupCanvases,false);backimage.img.src=backimage.url;function getLocalCoords(elem,ev){var ox=0,oy=0;var first;var pageX,pageY;while(elem!=null){ox+=elem.offsetLeft;oy+=elem.offsetTop;elem=elem.offsetParent}if(ev.hasOwnProperty('changedTouches')){first=ev.changedTouches[0];pageX=first.pageX;pageY=first.pageY}else{pageX=ev.pageX;pageY=ev.pageY}return{'x':pageX-ox,'y':pageY-oy}}var pop_layer=document.querySelector('#floating_layer'),alert_win=pop_layer.querySelector('.lay_send_gifts'),alert_btn=alert_win.querySelector('.btn_orange'),win_locked=0,_refresh=false;function _win_position(){pop_layer.style.display='block';alert_win.style.marginTop=window.innerHeight/2-alert_win.offsetHeight/2+'px';alert_win.style.marginLeft=window.innerWidth/2-alert_win.offsetWidth/2+'px'}function _lucky_tip(){if(!win_locked){win_locked=1;_win_position();_lucky();alert_btn.addEventListener('touchstart',function(){_close_tip()},false);alert_btn.addEventListener('mousedown',function(){_close_tip()},false)}}function _act_state_tip(){if(_active_is_pending||_active_is_over){if(!win_locked){win_locked=1;_win_position();alert_btn.addEventListener('touchstart',function(){_close_tip()},false);alert_btn.addEventListener('mousedown',function(){_close_tip()},false)}return false}return true}function _remain_tip(){if(!win_locked){win_locked=1;_win_position();alert_btn.addEventListener('touchstart',function(){_close_tip()},false);alert_btn.addEventListener('mousedown',function(){_close_tip()},false)}}function _login_tip(){if(!win_locked){win_locked=1;_win_position()}}function _close_tip(){if(win_locked){setTimeout(function(){win_locked=0;pop_layer.style.display='none';if(_remain>0&&act_state==0){location.reload()}},500)}return true}pop_layer.style.height=document.body.scrollHeight+'px';if(LK.app){if(_act_state_tip()){}}else{if(!win_locked){win_locked=1;_win_position()}}function _elock(e){e.preventDefault();return}};function _lucky(){if(LK.remain<=0||typeof(LK.prize)!='object'){return false}if(prizing){return false}prizing=true;var fields=['token='+LK.token,'prize='+LK.prize.id];ajax({url:location.href+'?do=lucky',type:'POST',dataType:'json',data:fields.join('&'),success:function(resp){if(resp&&resp.code===0){LK.remain=resp.remain;prized=true}else{}prizing=false}})}var createAjax=function(){var xhr=null;try{xhr=new ActiveXObject("microsoft.xmlhttp")}catch(e1){try{xhr=new XMLHttpRequest()}catch(e2){window.alert("????????ajax?????")}}return xhr};var ajax=function(conf){var type=conf.type;var url=conf.url;var data=conf.data;var dataType=conf.dataType;var success=conf.success;if(type==null){type="get"}if(dataType==null){dataType="text"}var xhr=createAjax();xhr.open(type,url,true);if(type=="GET"||type=="get"){xhr.send(null)}else if(type=="POST"||type=="post"){xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");xhr.send(data)}xhr.onreadystatechange=function(){if(xhr.readyState==4&&xhr.status==200){if(dataType=="text"||dataType=="TEXT"){if(success!=null){success(xhr.responseText)}}else if(dataType=="xml"||dataType=="XML"){if(success!=null){success(xhr.responseXML)}}else if(dataType=="json"||dataType=="JSON"){if(success!=null){success(eval("("+xhr.responseText+")"))}}}}}})();
+
