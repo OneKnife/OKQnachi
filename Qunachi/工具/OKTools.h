@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface OKTools : NSObject
 
@@ -14,4 +15,5 @@
 
 +(BOOL)fileisExitWithFileName:(NSString *)fileName;
 
++(void)printFrameWithView:(UIView *)view;
 @end

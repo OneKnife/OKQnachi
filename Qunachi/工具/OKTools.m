@@ -27,5 +27,10 @@
     return [manager fileExistsAtPath:fileName];
 }
 
++(void)printFrameWithView:(UIView *)view
+{
+    NSLog(@"x:%f,y:%f,w:%f,h:%f",view.frame.origin.x,view.frame.origin.y,view.frame.size.width,view.frame.size.height);
+}
+
 
 @end
