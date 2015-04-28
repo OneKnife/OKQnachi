@@ -62,10 +62,10 @@
     UIImageView * titleView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo"]];
     self.navigationItem.titleView=titleView;
     
-    UIBarButtonItem * rightButton =[[UIBarButtonItem alloc] initWithTitle:@"附近" style:UIBarButtonItemStyleDone target:self action:@selector(rightNavButtonOnClick)];
-    rightButton.tintColor=[UIColor whiteColor];
-    [rightButton setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:16]} forState:UIControlStateNormal];
-    self.navigationItem.rightBarButtonItem=rightButton;
+//    UIBarButtonItem * rightButton =[[UIBarButtonItem alloc] initWithTitle:@"附近" style:UIBarButtonItemStyleDone target:self action:@selector(rightNavButtonOnClick)];
+//    rightButton.tintColor=[UIColor whiteColor];
+//    [rightButton setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:16]} forState:UIControlStateNormal];
+//    self.navigationItem.rightBarButtonItem=rightButton;
     
     
     
@@ -315,7 +315,7 @@
                 OKYuefanListModel * model =[[OKYuefanListModel alloc]init];
                 [model setValuesForKeysWithDictionary:itemDict];
                 [tempArray addObject:model];
-                 NSLog(@"%ld",[tempArray[0] Age]);
+//                 NSLog(@"%ld",[tempArray[0] Age]);
                 
             }
             

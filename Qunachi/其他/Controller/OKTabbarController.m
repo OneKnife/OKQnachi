@@ -14,6 +14,9 @@
 #import "OKHomeViewController.h"
 #import "OKDiscoverViewController.h"
 #import "OKNavigationController.h"
+#import "OKNearListViewController.h"
+#import "OKFindShopViewController.h"
+
 
 @interface OKTabbarController ()<OKTabBarViewDelegate>
 
@@ -65,8 +68,14 @@
     OKHomeViewController * homeController = [[OKHomeViewController alloc] init];
 //    homeController.tabBarItem.image = [UIImage imageNamed:];
     [self setChilViewController:homeController WithImageName:@"nav_home" selectImageName:@"nav_home_on" title:@"首页"];
-    OKDiscoverViewController * discoverController = [[OKDiscoverViewController alloc] init];
-    [self setChilViewController:discoverController WithImageName:@"nav_find" selectImageName:@"nav_find_on" title:@"发现"];
+//    OKDiscoverViewController * discoverController = [[OKDiscoverViewController alloc] init];
+//    [self setChilViewController:discoverController WithImageName:@"nav_find" selectImageName:@"nav_find_on" title:@"发现"];
+    
+    OKNearListViewController * nearViewController =[[OKNearListViewController alloc] init];
+    [self setChilViewController:nearViewController WithImageName:@"nav_find" selectImageName:@"nav_find_on" title:@"发现"];
+    
+    
+    
     OKFindFriendViewController * findFriendController =[[OKFindFriendViewController alloc] init];
     [self setChilViewController:findFriendController WithImageName:@"nav_message" selectImageName:@"nav_message_on" title:@"好友"];
     
@@ -94,6 +103,16 @@
 -(void)buttonOnClick:(NSInteger)index{
     self.selectedIndex=index;
 }
+
+-(void)plusButtonClick{
+    
+    OKFindShopViewController * findShopController =[[OKFindShopViewController alloc] init];
+    
+    UINavigationController * nav =[[UINavigationController alloc] initWithRootViewController:findShopController];
+    
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

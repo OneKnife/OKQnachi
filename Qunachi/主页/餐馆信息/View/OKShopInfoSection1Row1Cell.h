@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OKShopInfoModel.h"
+
+@protocol OKShopInfoSection1Delegate <NSObject>
+
+-(void)imageClick;
+
+@end
 
 @interface OKShopInfoSection1Row1Cell : UITableViewCell
+
+@property(nonatomic,strong) OKShopInfoModel * model;
+@property (nonatomic,weak) id delegate;
 
 @end

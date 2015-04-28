@@ -11,7 +11,7 @@
 @interface OKShopInfoShareListModel : NSObject
 
 
-@property (nonatomic,assign) NSInteger ShareId;
+@property (nonatomic,strong) NSNumber * ShareId;
 @property (nonatomic,copy) NSString * Title;
 @property (nonatomic,assign) NSInteger FeelType;
 @property (nonatomic,copy) NSString * Image;

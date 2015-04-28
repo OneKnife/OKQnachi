@@ -10,6 +10,6 @@
 
 @interface OKShopInfoViewController : UIViewController
 
-@property (nonatomic,assign) NSInteger shopid;
+@property (nonatomic,strong) NSNumber * ShopId;
 
 @end

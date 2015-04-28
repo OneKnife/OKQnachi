@@ -9,6 +9,7 @@
 #import "OKTabbarView.h"
 #import "OKTabBarButton.h"
 
+
 @interface OKTabbarView()
 
 //@property (nonatomic,weak) OKTabBarButton * plusButton;
@@ -46,6 +47,7 @@
     
     _plusButton.bounds=CGRectMake(0, 0, _plusButton.currentImage.size.width, _plusButton.currentImage.size.height);
         [self addSubview:_plusButton];
+    [_plusButton addTarget:self action:@selector(plusButtonClick) forControlEvents:UIControlEventTouchUpInside];
 
     
 }
@@ -68,7 +70,6 @@
 {
     _plusButton.center = CGPointMake(SCREEN_WIDTH/2, self.frame.size.height/2);
     
-
     [self addSubview:_plusButton];
 
     
@@ -96,6 +97,12 @@
     
     [self.delegate buttonOnClick:button.tag];
     _selectedButton=button;
+}
+
+
+-(void)plusButtonClick
+{
+    [self.delegate plusButtonClick];
 }
 
 

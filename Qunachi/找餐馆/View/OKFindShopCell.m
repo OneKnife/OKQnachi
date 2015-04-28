@@ -1,14 +1,14 @@
 //
-//  OKShopInfoSection1Row3Cell.m
+//  OKFindShopCell.m
 //  Qunachi
 //
-//  Created by qianfeng on 15-4-26.
+//  Created by qianfeng on 15-4-27.
 //  Copyright (c) 2015年 zyc. All rights reserved.
 //
 
-#import "OKShopInfoSection1Row3Cell.h"
+#import "OKFindShopCell.h"
 
-@implementation OKShopInfoSection1Row3Cell
+@implementation OKFindShopCell
 
 - (void)awakeFromNib {
     // Initialization code

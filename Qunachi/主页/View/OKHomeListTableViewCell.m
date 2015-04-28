@@ -59,14 +59,14 @@
     }
 
 
-    if (model.CostType==1) {
+    if (model.CostType.intValue==1) {
         self.costTypeLabel.text=@"我请客";
     }
-    else if (model.CostType==2)
+    else if (model.CostType.intValue==2)
     {
         self.costTypeLabel.text=@"AA";
     }
-    else if (model.CostType==3)
+    else if (model.CostType.intValue==3)
     {
         self.costTypeLabel.text=@"你请客";
     }
@@ -75,12 +75,12 @@
         self.InvitedLabel.text=@"只约女生";
         self.InvitedLabel.textColor=[UIColor redColor];
     }
-    else if (model.Invited==1)
+    else if (model.Invited.intValue==1)
     {
         self.InvitedLabel.text=@"只约男生";
         self.InvitedLabel.textColor=[UIColor greenColor];
     }
-    else if(model.Invited==2)
+    else if(model.Invited.intValue==2)
     {
         self.InvitedLabel.text=@"男女不限";
         self.InvitedLabel.textColor=[UIColor grayColor];
@@ -92,12 +92,12 @@
     self.addressLabel.text=model.Address;
     self.distanceLabel.text=model.Distance;
 
-    self.viewCountLabel.text=[NSString stringWithFormat:@"%ld人看过",model.ViewCount];
+    self.viewCountLabel.text=[NSString stringWithFormat:@"%@人看过",model.ViewCount];
     
-    self.applyCountLabel.text=[NSString stringWithFormat:@"%ld人报名",model.ApplyCount];
+    self.applyCountLabel.text=[NSString stringWithFormat:@"%@人报名",model.ApplyCount];
 
-    self.commentCountLabel.text=[NSString stringWithFormat:@"%ld",model.CommentCount];
-    self.titleLabel.text=model.Title;
+    self.commentCountLabel.text=[NSString stringWithFormat:@"%@",model.CommentCount];
+    self.titleLabel.text=[NSString stringWithFormat:@"%@",model.Title];
     
 }
 

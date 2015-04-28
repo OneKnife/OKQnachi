@@ -10,13 +10,13 @@
 
 @interface OKNearListModel : NSObject
 
-@property (nonatomic,assign) NSInteger ShopId;
+@property (nonatomic,strong) NSNumber * ShopId;
 @property (nonatomic,copy) NSString * ShopName;
 @property (nonatomic,copy) NSString * Address;
 /**美食*/
-@property (nonatomic,assign)NSInteger PaiCount;
+@property (nonatomic,strong) NSNumber * PaiCount;
 /**推荐*/
-@property (nonatomic,assign) NSInteger RecommCount;
+@property (nonatomic,strong) NSNumber * RecommCount;
 /**推荐图标 0不显示*/
 @property (nonatomic,assign) NSInteger VipRecommCount;
 @property (nonatomic,assign) CGFloat AttrTasteRate;

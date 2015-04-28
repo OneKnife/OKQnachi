@@ -49,6 +49,7 @@
     for (NSDictionary * shareList in dict[@"ShareList"]) {
         OKShopInfoShareListModel * model = [[OKShopInfoShareListModel alloc] init];
         model.dict = shareList;
+        [self.ShareList addObject:model];
     }
     
     

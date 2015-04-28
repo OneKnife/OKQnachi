@@ -30,17 +30,17 @@
  2.AA
  3.你
  */
-@property (nonatomic,assign) NSInteger CostType;
+@property (nonatomic,strong) NSNumber * CostType;
 @property (nonatomic,copy) NSString * StartTime;
 @property (nonatomic,copy) NSString * ShopName;
 @property (nonatomic,copy) NSString * Address;
 /**报名人数*/
-@property (nonatomic,assign) NSInteger ApplyCount;
+@property (nonatomic,strong) NSNumber * ApplyCount;
 /**浏览人数*/
-@property (nonatomic,assign) NSInteger ViewCount;
+@property (nonatomic,strong) NSNumber * ViewCount;
 
 /**评论人数*/
-@property (nonatomic,assign) NSInteger CommentCount;
+@property (nonatomic,strong) NSNumber * CommentCount;
 @property (nonatomic,copy) NSString * CityName;
 
 /**
@@ -48,7 +48,7 @@
  1.只约男生
  2.男女不限
  */
-@property (nonatomic,assign) NSInteger Invited;
+@property (nonatomic,strong) NSNumber * Invited;
 @property (nonatomic,copy) NSString * Distance;
 
 @end

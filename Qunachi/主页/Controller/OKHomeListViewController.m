@@ -21,6 +21,7 @@
 }
 -(void)viewDidLoad
 {
+    [super viewDidLoad];
     [self createTableView];
     
     self.navigationController.navigationBar.barTintColor=[UIColor orangeColor];
@@ -37,7 +38,7 @@
 -(void)createTableView
 {
     
-    _tableView =[[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    _tableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-44) style:UITableViewStylePlain];
     
     _tableView.delegate=self;
     _tableView.dataSource=self;
@@ -65,6 +66,7 @@
     cell.model=self.listModelArray[indexPath.row];
     
     return cell;
+
 }
 
 

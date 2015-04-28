@@ -87,7 +87,7 @@
     else
     {
         self.recommentLabel.hidden=NO;
-        self.recommentLabel.text=[NSString stringWithFormat:@"推荐 %ld",_model.RecommCount];
+        self.recommentLabel.text=[NSString stringWithFormat:@"推荐 %@",_model.RecommCount];
     }
     
     if (_model.PaiCount==0) {
@@ -96,7 +96,7 @@
     else
     {
         self.paiCount.hidden=NO;
-        self.paiCount.text=[NSString stringWithFormat:@"美食 %ld",_model.PaiCount];
+        self.paiCount.text=[NSString stringWithFormat:@"美食 %@",_model.PaiCount];
     }
     
 }

@@ -12,6 +12,8 @@
 
 -(void)buttonOnClick:(NSInteger)index;
 
+-(void)plusButtonClick;
+
 @end
 
 

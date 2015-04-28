@@ -14,7 +14,7 @@
 {
     _dict=dict;
     
-    [self setValuesForKeysWithDictionary:dict];
+    [self setValuesForKeysWithDictionary:_dict];
 }
 
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key

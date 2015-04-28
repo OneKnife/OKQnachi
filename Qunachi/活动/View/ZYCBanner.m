@@ -29,7 +29,7 @@
 {
     if (self=[super init]) {
         [self createBanner];
-        self.backgroundColor=[UIColor redColor];
+//        self.backgroundColor=[UIColor redColor];
         self.userInteractionEnabled = YES;
         self.frame=CGRectMake(0, 0, SCREEN_WIDTH, BANNER_HEIGHT);
     }

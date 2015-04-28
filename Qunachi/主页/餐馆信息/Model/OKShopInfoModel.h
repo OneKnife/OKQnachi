@@ -12,7 +12,7 @@
 @interface OKShopInfoModel : NSObject
 
 
-@property (nonatomic,assign) NSInteger ShopId;
+@property (nonatomic,strong) NSNumber * ShopId;
 @property (nonatomic,copy) NSString * ShopName;
 @property (nonatomic,copy) NSString * Cover;
 @property (nonatomic,assign) NSInteger AreaId;
@@ -26,7 +26,7 @@
 @property (nonatomic,copy) NSString * Lat;
 @property (nonatomic,strong) NSMutableArray * Phone;
 @property (nonatomic,strong) NSMutableArray * Tags;
-@property (nonatomic,assign) NSInteger TasteRate;
+@property (nonatomic,assign) CGFloat TasteRate;
 @property (nonatomic,assign) NSInteger RecommendCount;
 @property (nonatomic,assign) NSInteger FavoriteCount;
 @property (nonatomic,copy) NSString * RecommendVipName;

@@ -1,18 +1,18 @@
 //
-//  OKFindFriendViewController.m
+//  OKActivityCarefullyChosenViewController.m
 //  Qunachi
 //
-//  Created by qianfeng on 15-4-22.
+//  Created by qianfeng on 15-4-28.
 //  Copyright (c) 2015年 zyc. All rights reserved.
 //
 
-#import "OKFindFriendViewController.h"
+#import "OKActivityCarefullyChosenViewController.h"
 
-@interface OKFindFriendViewController ()
+@interface OKActivityCarefullyChosenViewController ()
 
 @end
 
-@implementation OKFindFriendViewController
+@implementation OKActivityCarefullyChosenViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

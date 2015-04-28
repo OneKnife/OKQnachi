@@ -12,6 +12,8 @@
 #import "OKNearListTableViewCell.h"
 #import "UIView+PSBTransitionAnimation.h"
 #import "OKShopInfoViewController.h"
+#import "MJRefresh.h"
+
 #import <BaiduMapAPI/BMapKit.h>
 @interface OKNearListViewController ()<UITableViewDataSource,UITableViewDelegate,BMKMapViewDelegate,BMKLocationServiceDelegate>
 
@@ -66,6 +68,11 @@
     [_tableView setBackgroundColor:[UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:1]];
     
     
+    // 添加传统的下拉刷新
+    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
+    [_tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+
+    
     [self.view addSubview:_tableView];
     
 }
@@ -100,7 +107,14 @@
     OKShopInfoViewController * shopInfoViewController =[[OKShopInfoViewController alloc] init];
     
 
-    shopInfoViewController.shopid=[self.dataArray[indexPath.row] shopid];
+//    shopInfoViewController.shopid=;
+    
+//    NSInteger temp =;
+    
+//    NSLog(@"%@", );
+    
+    shopInfoViewController.shopId=[self.dataArray[indexPath.row] ShopId];
+    
     [self.navigationController pushViewController:shopInfoViewController animated:YES];
     
     
@@ -112,43 +126,8 @@
     if (_dataArray==nil) {
         _dataArray=[[NSMutableArray alloc] init];
         
-        AFHTTPSessionManager * manager =[AFHTTPSessionManager manager];
-        
-        NSUserDefaults * user =[NSUserDefaults standardUserDefaults];
-        
-        NSString * lat = [NSString stringWithFormat:@"%f",[user floatForKey:@"lat"]];
-        NSString * lon = [NSString stringWithFormat:@"%f",[user floatForKey:@"lon"]];
-        
-        
-        NSDictionary * param =@{@"cityid":@"2",
-                               @"dist":@"0",
-                               @"distance":@"500",
-                               @"lat":lat,
-                               @"limit":@"20",
-                               @"lng":lon,
-                               @"offset":@"0",
-                               @"sort":@"1"};
-    
-        
-        
-        [manager POST:[NSString stringWithFormat:NEAR_LIST_URL] parameters:param success:^(NSURLSessionDataTask *task, NSDictionary * responseObject) {
-            
-            for (NSDictionary * itemDict in responseObject[@"result"][@"List"]) {
-                OKNearListModel * model =[[OKNearListModel alloc] init];
-                [model setValuesForKeysWithDictionary:itemDict];
-                [_dataArray addObject:model];
-            }
-            
-            [_tableView reloadData];
-            
-            _rightButton.enabled=YES;
-        
-            
-            
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            NSLog(@"near list request err!");
-        }];
-        
+        // 马上进入刷新状态
+        [_tableView.header beginRefreshing];
     }
     
     return _dataArray;
@@ -185,15 +164,16 @@
     
     //如果当前是列表页面
     if (!_isMapView) {
-//        self.view=_mapView;
+
         [self.view bringSubviewToFront:_mapView];
-        [self createAnnotation];
+
         
     }
     //地图页面
     else
     {
         [self.view bringSubviewToFront:_tableView];
+
     }
     button.selected=!button.isSelected;
     _isMapView=!_isMapView;
@@ -247,7 +227,6 @@
     [_mapViewMap addAnnotation:annotation];
   */
     
-    
     for (OKNearListModel * model in self.dataArray) {
         BMKPointAnnotation * annotation =[[BMKPointAnnotation alloc] init];
         CLLocationCoordinate2D coor;
@@ -256,6 +235,7 @@
         annotation.coordinate=coor;
         annotation.title=model.ShopName;
         annotation.subtitle=model.Address;
+        
         [_mapViewMap addAnnotation:annotation];
     }
  
@@ -347,6 +327,7 @@
             annotationView.animatesDrop = YES;
             // 设置可拖拽
             annotationView.draggable = NO;
+//            annotationView.accessibilityIdentifier
         }
         return annotationView;
     
@@ -356,7 +337,20 @@
 // 当点击annotation view弹出的泡泡时，调用此接口
 - (void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view
 {
-    NSLog(@"paopaoclick");
+    NSLog(@"%@",view.annotation.title);
+    
+    for (OKNearListModel * model in self.dataArray) {
+        if ([model.ShopName isEqualToString:view.annotation.title]) {
+            
+            OKShopInfoViewController * shopInfoController =[[OKShopInfoViewController alloc] init];
+            shopInfoController.ShopId=model.ShopId;
+            
+            [self.navigationController pushViewController:shopInfoController animated:YES];
+            
+        }
+    }
+    
+
 }
 
 
@@ -364,6 +358,7 @@
 #pragma mark - 系统回调
 -(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [_mapViewMap viewWillAppear];
     _mapViewMap.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
     _locService.delegate = self;
@@ -378,13 +373,58 @@
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
+    
     [_mapViewMap viewWillDisappear];
     _mapViewMap.delegate = nil; // 不用时，置nil
     _locService.delegate = nil;
 }
 
 
+-(void)loadNewData
+{
+    AFHTTPSessionManager * manager =[AFHTTPSessionManager manager];
+    
+    NSUserDefaults * user =[NSUserDefaults standardUserDefaults];
+    
+    NSString * lat = [NSString stringWithFormat:@"%f",[user floatForKey:@"lat"]];
+    NSString * lon = [NSString stringWithFormat:@"%f",[user floatForKey:@"lon"]];
+    
+    
+    NSDictionary * param =@{@"cityid":@"2",
+                            @"dist":@"0",
+                            @"distance":@"500",
+                            @"lat":lat,
+                            @"limit":@"20",
+                            @"lng":lon,
+                            @"offset":@"0",
+                            @"sort":@"1"};
+    
+    
+    
+    [manager POST:[NSString stringWithFormat:NEAR_LIST_URL] parameters:param success:^(NSURLSessionDataTask *task, NSDictionary * responseObject) {
+        
+        for (NSDictionary * itemDict in responseObject[@"result"][@"List"]) {
+            OKNearListModel * model =[[OKNearListModel alloc] init];
+            [model setValuesForKeysWithDictionary:itemDict];
+            [_dataArray addObject:model];
+        }
+        
+        [_tableView reloadData];
+        
+        _rightButton.enabled=YES;
+        
+        [self createAnnotation];
+        
+        [_tableView.header endRefreshing];
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"near list request err!");
+        [_tableView.header endRefreshing];
+    }];
 
+}
 
 
 

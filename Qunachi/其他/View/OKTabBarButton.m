@@ -37,8 +37,8 @@
     
     [self setTitleColor:[UIColor orangeColor] forState:UIControlStateSelected];
     
-    CGRect frame =self.frame;
-    frame = (CGRect){{0,0},self.currentImage.size};
+//    CGRect frame =self.frame;
+//    frame = (CGRect){{0,0},self.currentImage.size};
 }
 
 -(CGRect)imageRectForContentRect:(CGRect)contentRect
