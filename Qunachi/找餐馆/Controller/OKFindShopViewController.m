@@ -11,6 +11,8 @@
 #import "OKFindShopModel.h"
 #import "OKShopInfoViewController.h"
 
+
+
 #define FIND_SHOP_URL @"http://api.qunachi.com/v5.2.0/Search/Shop/getSuggestList?appid=1&hash=9c9777bffa23dc6778721885d1e34ea1&deviceid=172fe65995535e9670307f288722585&channel=appstore&cityid=2&keyword=%@"
 
 @interface OKFindShopViewController ()<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
@@ -27,6 +29,9 @@
     NSArray * _tipsArray;
     NSTimer * _timer;
     NSMutableArray * _tipsButtonArray;
+    
+    //显示推荐
+    UIView * _tipsView;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -83,10 +88,12 @@
     _dataArray=[[NSMutableArray alloc] init];
     
     self.view.backgroundColor=[UIColor whiteColor];
-    _searchTableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+    _searchTableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
     
     _searchTableView.delegate=self;
     _searchTableView.dataSource=self;
+    
+    
     [self.view addSubview:_searchTableView];
 }
 
@@ -97,6 +104,7 @@
 {
     //  NSLog(@"%@",[);
     _searchText=searchText;
+    
     
 
     
@@ -114,6 +122,13 @@
         
         [_searchTableView reloadData];
         
+        if (_dataArray.count==0) {
+            _tipsView.hidden=NO;
+        }
+        else
+        {
+            _tipsView.hidden=YES;
+        }
         
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -148,7 +163,7 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel * title =[[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-    if (_searchText) {
+    if (_searchText.length) {
         title.text=[NSString stringWithFormat:@"查找\"%@\"",_searchText];
         title.textColor=[UIColor orangeColor];
     }
@@ -190,6 +205,7 @@
     OKShopInfoViewController * shopInfoController =[[OKShopInfoViewController alloc] init];
     
     shopInfoController.ShopId=[_dataArray[indexPath.row] ShopId];
+    shopInfoController.view.frame=self.view.frame;
     
     [self.navigationController pushViewController:shopInfoController animated:YES];
     
@@ -198,7 +214,7 @@
 
 -(void)createTipsView
 {
-    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 80, SCREEN_WIDTH, 200)];
+    _tipsView = [[UIView alloc] initWithFrame:CGRectMake(0, 80, SCREEN_WIDTH, 200)];
     _tipsArray= @[@"情侣约会",
                   @"朋友聚餐",
                   @"家庭聚会",
@@ -212,7 +228,7 @@
     for (NSInteger i =0; i<2;i++) {
         for (NSInteger j =0; j<3; j++) {
             UIButton * button =[[UIButton alloc] initWithFrame:CGRectMake(0,0, 70, 20)];
-            button.center =CGPointMake(SCREEN_WIDTH/4*(j+1), 40*(i+1));
+            button.center =CGPointMake(SCREEN_WIDTH/4*(j+1)-10, 40*(i+1)+10);
             
             [button setTitle:_tipsArray[i*3+j] forState:UIControlStateNormal];
             [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -221,13 +237,14 @@
             button.layer.cornerRadius=5;
             button.layer.borderColor=[UIColor blackColor].CGColor;
             button.layer.borderWidth=1;
-            [view addSubview:button];
+            button.alpha=0.1;
+            [_tipsView addSubview:button];
             [_tipsButtonArray addObject:button];
         }
     }
     
     
-    [self.view addSubview:view];
+    [self.view addSubview:_tipsView];
     [self createTimer];
     
 }
@@ -243,23 +260,28 @@
 {
     for (UIButton * button in _tipsButtonArray) {
         [UIView animateWithDuration:3 animations:^{
-            button.alpha=0.1;
+   
+            button.alpha=1;
+            CGRect frame = button.frame;
+            frame.origin.x+=10;
+            frame.origin.y-=10;
+            button.frame=frame;
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:3 animations:^{
-                button.alpha=1;
+             
+                button.alpha=0.1;
+                CGRect frame = button.frame;
+                frame.origin.x-=10;
+                frame.origin.y+=10;
+                button.frame=frame;
             }];
         }];
     }
-//    for (UIButton * button in _tipsButtonArray) {
-//        [UIView animateWithDuration:5 animations:^{
-//            button.alpha=0.1;
-//        } completion:^(BOOL finished) {
-//            [UIView animateWithDuration:5 animations:^{
-//                button.alpha=1;
-//            }];
-//        }];
-//    }
+
     
 }
+
+
+
 
 @end

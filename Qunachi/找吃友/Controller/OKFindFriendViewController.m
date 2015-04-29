@@ -27,6 +27,7 @@
     UISearchBar * _searchBar;
     NSMutableArray * _dataArray;
     UITableView * _searchTableView;
+    NSString * _searchText;
 //    NSArray * _tipsArray;
     
 }
@@ -60,6 +61,8 @@
     
     _searchTableView.delegate=self;
     _searchTableView.dataSource=self;
+    
+
     [self.view addSubview:_searchTableView];
 }
 
@@ -70,6 +73,8 @@
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
   //  NSLog(@"%@",[);
+    _searchText=searchText;
+    
     
     NSString * url =[[NSString stringWithFormat:FIND_FRIEND_URL,searchText] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
@@ -120,6 +125,11 @@
     return 50;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30;
+}
+
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [_searchBar resignFirstResponder];
@@ -135,6 +145,7 @@
 }
 
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -145,6 +156,22 @@
     [_searchBar resignFirstResponder];
 }
 
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UILabel * title =[[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
+    if (_searchText.length) {
+        title.text=[NSString stringWithFormat:@"查找\"%@\"",_searchText];
+        title.textColor=[UIColor orangeColor];
+    }
+    else
+    {
+        title.text=@"";
+    }
+    
+    
+    return title;
+}
 
 
 

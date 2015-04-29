@@ -35,6 +35,7 @@
     
     self.avatarButton.layer.masksToBounds=YES;
     self.avatarButton.layer.cornerRadius=5;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

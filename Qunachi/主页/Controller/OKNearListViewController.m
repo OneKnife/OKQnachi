@@ -33,7 +33,8 @@
     UIButton * _rightButton;
     BOOL _isMapView;
     
-    BOOL once;
+    BOOL _annOnce;
+    BOOL _locationOnce;
     
     BMKLocationService * _locService;
     
@@ -62,6 +63,7 @@
 {
     _tableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-108) style:UITableViewStylePlain];
     
+    self.automaticallyAdjustsScrollViewInsets =NO;
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.rowHeight=96;
@@ -279,9 +281,9 @@
     
     _location=userLocation.location;
    
-    if (once==NO) {
+    if (_locationOnce==NO) {
         _mapViewMap.centerCoordinate=userLocation.location.coordinate;
-        once=YES;
+        _locationOnce=YES;
     }
     
 }
@@ -346,6 +348,7 @@
             shopInfoController.ShopId=model.ShopId;
             
             [self.navigationController pushViewController:shopInfoController animated:YES];
+            break;
             
         }
     }
@@ -383,6 +386,8 @@
 
 -(void)loadNewData
 {
+    [_dataArray removeAllObjects];
+    
     AFHTTPSessionManager * manager =[AFHTTPSessionManager manager];
     
     NSUserDefaults * user =[NSUserDefaults standardUserDefaults];
@@ -414,7 +419,13 @@
         
         _rightButton.enabled=YES;
         
-        [self createAnnotation];
+        
+        if (!_annOnce) {
+            [self createAnnotation];
+            _annOnce=YES;
+        }
+        
+        
         
         [_tableView.header endRefreshing];
         

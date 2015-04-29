@@ -11,6 +11,8 @@
 #import "AFNetworking.h"
 #import "OKActivityBannerModel.h"
 #import "OKActivityWebViewController.h"
+#import "OKActivityCarefullyChosenViewController.h"
+#import "OKActivityFreeViewController.h"
 
 #define ACTIVITY_BANNER_URL @"http://api.qunachi.com/v5.2.0/Home/Index/getCarousel?appid=1&hash=a189f26a3a1ddf4bae8c30c5da0d88c6&deviceid=172fe65995535e9670307f288722585&channel=appstore&cityid=%d"
 
@@ -90,12 +92,12 @@
     }
     else if (indexPath.section==1) {
         if (indexPath.row==0) {
-            cell.textLabel.text=@"约饭吧";
+            cell.textLabel.text=@"免费试吃";
             cell.imageView.image=[UIImage imageNamed:@"ico_yuefan"];
 
         }
         else if (indexPath.row==1) {
-            cell.textLabel.text=@"免费试吃";
+            cell.textLabel.text=@"预留栏位";
             cell.imageView.image=[UIImage imageNamed:@"mfsch_ico"];
         }
     }
@@ -117,6 +119,28 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 5;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section==0) {
+        if (indexPath.row==0) {
+            
+            OKActivityCarefullyChosenViewController * avc =[[OKActivityCarefullyChosenViewController alloc] init];
+            [self.navigationController pushViewController:avc animated:YES];
+            
+        }
+    }
+    if (indexPath.section==1) {
+        if (indexPath.row==0) {
+            OKActivityFreeViewController * afvc =[OKActivityFreeViewController alloc];
+            [self.navigationController pushViewController:afvc animated:YES];
+            
+        }
+    }
+    
+    
 }
 
 #pragma mark - hearderView
@@ -171,6 +195,7 @@
     [self.navigationController pushViewController:web animated:YES];
     
 }
+
 
 
 
