@@ -1,14 +1,14 @@
 //
-//  OKHomeListTableViewCell.m
+//  OKHomeDetailCell.m
 //  Qunachi
 //
 //  Created by qianfeng on 15-4-24.
 //  Copyright (c) 2015年 zyc. All rights reserved.
 //
 
-#import "OKHomeListTableViewCell.h"
+#import "OKHomeDetailCell.h"
 #import "UIButton+WebCache.h"
-@interface OKHomeListTableViewCell()
+@interface OKHomeDetailCell()
 
 @property (weak, nonatomic) IBOutlet UIButton *avatarButton;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
@@ -19,14 +19,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *startTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *CityNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
-@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *viewCountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *applyCountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *commentCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *jumpShop;
+
 @end
-@implementation OKHomeListTableViewCell
+@implementation OKHomeDetailCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -38,6 +36,10 @@
     
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    self.jumpShop.layer.masksToBounds=YES;
+    self.jumpShop.layer.cornerRadius=3;
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -46,12 +48,12 @@
     // Configure the view for the selected state
 }
 
--(void)setModel:(OKYuefanListModel *)model
+-(void)setModel:(OKHomeDetailModel *)model
 {
     _model=model;
     [self.avatarButton sd_setBackgroundImageWithURL:[NSURL URLWithString:model.AvatarUrl] forState:UIControlStateNormal];
     self.userNameLabel.text=model.UserName;
-    self.ageLabel.text=[NSString stringWithFormat:@"%ld岁",model.Age];
+    self.ageLabel.text=[NSString stringWithFormat:@"%@岁",model.Age];
     
     if (model.UserGender==0) {
         self.userGenderImageView.image=[UIImage imageNamed:@"ico_woman_2"];
@@ -93,13 +95,7 @@
     self.CityNameLabel.text=model.CityName;
     
     self.addressLabel.text=model.Address;
-    self.distanceLabel.text=model.Distance;
 
-    self.viewCountLabel.text=[NSString stringWithFormat:@"%@人看过",model.ViewCount];
-    
-    self.applyCountLabel.text=[NSString stringWithFormat:@"%@人报名",model.ApplyCount];
-
-    self.commentCountLabel.text=[NSString stringWithFormat:@"%@",model.CommentCount];
     self.titleLabel.text=[NSString stringWithFormat:@"%@",model.Title];
     
 }
@@ -112,5 +108,8 @@
     [super setFrame:frame];
 }
 
+- (IBAction)jumpShop:(id)sender {
+    [self.delegate jumpShopInfoControllerWithshopId:_model.ShopId];
+}
 
 @end

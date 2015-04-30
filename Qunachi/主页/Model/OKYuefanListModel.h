@@ -22,7 +22,7 @@
  0.女1.男
  */
 @property (nonatomic,copy) NSString * UserGender;
-@property (nonatomic,assign) NSInteger DatingId;
+@property (nonatomic,strong) NSNumber * DatingId;
 @property (nonatomic,copy) NSString * Title;
 /**
  谁请客

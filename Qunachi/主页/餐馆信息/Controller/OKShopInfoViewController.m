@@ -17,7 +17,7 @@
 
 #define SHOP_INFO_URL @"http://api.qunachi.com/v5.2.0/Pai/Shop/info?appid=1&hash=719467a7a9d6d139213196573c7afb8b&deviceid=172fe65995535e9670307f288722585&channel=appstore&shopid=%@"
 
-@interface OKShopInfoViewController ()<UITableViewDataSource,UITableViewDelegate,OKShopInfoSection1Delegate,OKShopInfoShareListDelegate>
+@interface OKShopInfoViewController ()<UITableViewDataSource,UITableViewDelegate,OKShopInfoSection1Delegate,OKShopInfoShareListDelegate,UIAlertViewDelegate>
 
 @property (nonatomic,strong) OKShopInfoModel * model;
 
@@ -27,6 +27,8 @@
 {
     UITableView * _tableView;
     OKShopInfoModel * _model;
+    
+    NSNumber * _phoneNum;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -229,6 +231,27 @@
     
 }
 
+-(void)phoneClickWithPhoneNumber:(NSArray *)numArray
+{
+    if (numArray.count>0) {
+        NSLog(@"%@",[NSString stringWithFormat:@"%@",numArray[0]]);
+    UIAlertView * alert =[[UIAlertView alloc] initWithTitle:@"联系饭店" message:nil delegate:self cancelButtonTitle:@"改天再说" otherButtonTitles:[NSString stringWithFormat:@"%@",numArray[0]], nil];
+    _phoneNum=numArray[0];
+
+    [alert show];
+
+    }
+    else
+    {
+        UIAlertView * alert=[[UIAlertView alloc]initWithTitle:@"该商户暂未提供电话" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+        [alert show];
+        [alert dismissWithClickedButtonIndex:0 animated:YES];
+    }
+    
+    
+}
+
+
 -(void)shareListImageClick:(OKShopInfoShareListModel *)model
 {
     OKShareFoodViewController * svc =[[OKShareFoodViewController alloc] init];
@@ -239,6 +262,13 @@
     
     [self.navigationController pushViewController:svc animated:YES];
     
+}
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==1) {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",_phoneNum]]];
+    }
 }
 
 @end

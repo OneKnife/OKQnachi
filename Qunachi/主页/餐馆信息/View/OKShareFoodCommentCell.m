@@ -22,6 +22,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -35,10 +37,11 @@
 {
     _model=model;
     
-    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:model.AvatarUrl] placeholderImage:[UIImage imageNamed:@"64"]];
-    self.userNameLabel.text=model.UserName;
-    self.dataLabel.text=[model.DateStr substringWithRange:NSMakeRange(5, 11)];
-    self.commentLabel.text=model.Comment;
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:_model.AvatarUrl] placeholderImage:[UIImage imageNamed:@"64"]];
+    self.userNameLabel.text=_model.UserName;
+    
+    self.dataLabel.text=[_model.DateStr substringWithRange:NSMakeRange(5, 11)];
+    self.commentLabel.text=_model.Comment;
     
     CGRect cellFrame=self.frame;
     cellFrame.size.height=_model.cellHeight;

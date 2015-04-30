@@ -27,6 +27,9 @@
 {
     UITableView * _tableView;
     NSInteger _currentPage;
+    //是否是上拉刷新,YES表示上拉刷新
+    BOOL _isUpLoad;
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -66,6 +69,8 @@
     if (cell==nil) {
         cell=[[NSBundle mainBundle]loadNibNamed:@"OKActivityCarefullyChosenCell" owner:nil options:nil].lastObject;
     }
+    
+//    NSLog(@"%d",indexPath.row);
     cell.model=self.dataArray[indexPath.row];
     return cell;
 }
@@ -97,12 +102,24 @@
     
     [manager GET:url parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary * responseObject) {
         
+        if (_isUpLoad) {
+            [_tableView.footer endRefreshing];
+        }
+        else
+        {
+            [_dataArray removeAllObjects];
+            [_tableView.header endRefreshing];
+        }
+        
         for (NSDictionary * itemDict in responseObject[@"result"][@"List"]) {
             OKActivityCarefullyChosenModel * model =[[OKActivityCarefullyChosenModel alloc] init];
             model.dict=itemDict;
             [_dataArray addObject:model];
         }
+        
+       
         [_tableView.header endRefreshing];
+
         [_tableView reloadData];
         
         
@@ -115,16 +132,17 @@
 
 -(void)loadDataWithDownTowords
 {
-    [_dataArray removeAllObjects];
+    _isUpLoad=NO;
     _currentPage=0;
     [self requestData];
     
 }
 -(void)loadDataWithUpTowords
 {
+    _isUpLoad=YES;
     _currentPage++;
     
-    if (_currentPage<1) {
+    if (_currentPage<2) {
         [self requestData];
     }
     else

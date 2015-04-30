@@ -35,6 +35,7 @@
         [array[i] setUserInteractionEnabled:YES];
         [array[i] addSubview:button];
     }
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     
 }
 

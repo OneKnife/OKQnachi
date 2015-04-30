@@ -907,6 +907,13 @@
 		BC44DD4A1AEE6DBA008C31B9 /* OKShopShareFoodSection1row1Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC44DD481AEE6DBA008C31B9 /* OKShopShareFoodSection1row1Cell.xib */; };
 		BC44DD4D1AEE7159008C31B9 /* OKShopShareFoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC44DD4C1AEE7159008C31B9 /* OKShopShareFoodModel.m */; };
 		BC44DD501AEE78B4008C31B9 /* OKShopShareFoodCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC44DD4F1AEE78B4008C31B9 /* OKShopShareFoodCommentModel.m */; };
+		BC4955891AF1CE3F00E28B7B /* OKHomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4955881AF1CE3F00E28B7B /* OKHomeDetailViewController.m */; };
+		BC49558C1AF1CFC300E28B7B /* OKHomeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC49558B1AF1CFC300E28B7B /* OKHomeDetailModel.m */; };
+		BC4955971AF1D18D00E28B7B /* OKHomeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4955951AF1D18D00E28B7B /* OKHomeDetailCell.m */; };
+		BC4955981AF1D18D00E28B7B /* OKHomeDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4955961AF1D18D00E28B7B /* OKHomeDetailCell.xib */; };
+		BC49559F1AF1DC7400E28B7B /* OKHomeDetailCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC49559D1AF1DC7400E28B7B /* OKHomeDetailCommentCell.m */; };
+		BC4955A01AF1DC7400E28B7B /* OKHomeDetailCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC49559E1AF1DC7400E28B7B /* OKHomeDetailCommentCell.xib */; };
+		BC4955A31AF1DF8D00E28B7B /* OKHomeDetailCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4955A21AF1DF8D00E28B7B /* OKHomeDetailCommentModel.m */; };
 		BC60877D1AE7A8B90054A1E4 /* OKTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC60877C1AE7A8B90054A1E4 /* OKTabBarButton.m */; };
 		BC6087811AE7B9B20054A1E4 /* OKFindFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6087801AE7B9B20054A1E4 /* OKFindFriendViewController.m */; };
 		BC6087841AE7BA5D0054A1E4 /* OKActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6087831AE7BA5D0054A1E4 /* OKActivityViewController.m */; };
@@ -1929,6 +1936,18 @@
 		BC44DD4C1AEE7159008C31B9 /* OKShopShareFoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKShopShareFoodModel.m; sourceTree = "<group>"; };
 		BC44DD4E1AEE78B4008C31B9 /* OKShopShareFoodCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKShopShareFoodCommentModel.h; sourceTree = "<group>"; };
 		BC44DD4F1AEE78B4008C31B9 /* OKShopShareFoodCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKShopShareFoodCommentModel.m; sourceTree = "<group>"; };
+		BC4955871AF1CE3F00E28B7B /* OKHomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKHomeDetailViewController.h; sourceTree = "<group>"; };
+		BC4955881AF1CE3F00E28B7B /* OKHomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKHomeDetailViewController.m; sourceTree = "<group>"; };
+		BC49558A1AF1CFC300E28B7B /* OKHomeDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKHomeDetailModel.h; sourceTree = "<group>"; };
+		BC49558B1AF1CFC300E28B7B /* OKHomeDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKHomeDetailModel.m; sourceTree = "<group>"; };
+		BC4955941AF1D18D00E28B7B /* OKHomeDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKHomeDetailCell.h; sourceTree = "<group>"; };
+		BC4955951AF1D18D00E28B7B /* OKHomeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKHomeDetailCell.m; sourceTree = "<group>"; };
+		BC4955961AF1D18D00E28B7B /* OKHomeDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OKHomeDetailCell.xib; sourceTree = "<group>"; };
+		BC49559C1AF1DC7400E28B7B /* OKHomeDetailCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKHomeDetailCommentCell.h; sourceTree = "<group>"; };
+		BC49559D1AF1DC7400E28B7B /* OKHomeDetailCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKHomeDetailCommentCell.m; sourceTree = "<group>"; };
+		BC49559E1AF1DC7400E28B7B /* OKHomeDetailCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OKHomeDetailCommentCell.xib; sourceTree = "<group>"; };
+		BC4955A11AF1DF8D00E28B7B /* OKHomeDetailCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKHomeDetailCommentModel.h; sourceTree = "<group>"; };
+		BC4955A21AF1DF8D00E28B7B /* OKHomeDetailCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKHomeDetailCommentModel.m; sourceTree = "<group>"; };
 		BC60877B1AE7A8B90054A1E4 /* OKTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKTabBarButton.h; sourceTree = "<group>"; };
 		BC60877C1AE7A8B90054A1E4 /* OKTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKTabBarButton.m; sourceTree = "<group>"; };
 		BC60877E1AE7ABDF0054A1E4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -3134,6 +3153,8 @@
 				BC368F9F1AEA1C19001ADC88 /* OKHomeListViewController.m */,
 				BC63CE111AEBD05C00A7C2C3 /* OKNearListViewController.h */,
 				BC63CE121AEBD05C00A7C2C3 /* OKNearListViewController.m */,
+				BC4955871AF1CE3F00E28B7B /* OKHomeDetailViewController.h */,
+				BC4955881AF1CE3F00E28B7B /* OKHomeDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3145,6 +3166,10 @@
 				BC368F6A1AE9D3E0001ADC88 /* OKYuefanListModel.m */,
 				BC37548E1AEC77A400FC4330 /* OKNearListModel.h */,
 				BC37548F1AEC77A400FC4330 /* OKNearListModel.m */,
+				BC49558A1AF1CFC300E28B7B /* OKHomeDetailModel.h */,
+				BC49558B1AF1CFC300E28B7B /* OKHomeDetailModel.m */,
+				BC4955A11AF1DF8D00E28B7B /* OKHomeDetailCommentModel.h */,
+				BC4955A21AF1DF8D00E28B7B /* OKHomeDetailCommentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3152,6 +3177,9 @@
 		BC6A482D1AE78B4D007127B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC4955941AF1D18D00E28B7B /* OKHomeDetailCell.h */,
+				BC4955951AF1D18D00E28B7B /* OKHomeDetailCell.m */,
+				BC4955961AF1D18D00E28B7B /* OKHomeDetailCell.xib */,
 				BC44DCFE1AEDCD6F008C31B9 /* OKHomeListTableViewCell.h */,
 				BC44DCFF1AEDCD6F008C31B9 /* OKHomeListTableViewCell.m */,
 				BC44DD001AEDCD6F008C31B9 /* OKHomeListTableViewCell.xib */,
@@ -3160,6 +3188,9 @@
 				BC87E6AB1AEC74AF002C9CB6 /* OKNearListTableViewCell.xib */,
 				BC3754911AECC59500FC4330 /* OKNearMapView.h */,
 				BC3754921AECC59500FC4330 /* OKNearMapView.m */,
+				BC49559C1AF1DC7400E28B7B /* OKHomeDetailCommentCell.h */,
+				BC49559D1AF1DC7400E28B7B /* OKHomeDetailCommentCell.m */,
+				BC49559E1AF1DC7400E28B7B /* OKHomeDetailCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3600,6 +3631,7 @@
 				BC268FF81AE79F8D00ACD5B2 /* sina_icon@3x.png in Resources */,
 				BC268E7B1AE79F8D00ACD5B2 /* ico_guimi_on@2x.png in Resources */,
 				BC268EFE1AE79F8D00ACD5B2 /* icon_mytandian_orange@2x.png in Resources */,
+				BC4955A01AF1DC7400E28B7B /* OKHomeDetailCommentCell.xib in Resources */,
 				BC268F0C1AE79F8D00ACD5B2 /* invite_ico.png in Resources */,
 				BC268E3C1AE79F8D00ACD5B2 /* eatry_ico_red.png in Resources */,
 				BC268E981AE79F8D00ACD5B2 /* ico_man_2.png in Resources */,
@@ -3656,6 +3688,7 @@
 				BC268F9D1AE79F8D00ACD5B2 /* regist_phone_ico.png in Resources */,
 				BC268E341AE79F8D00ACD5B2 /* eatry_address@2x.png in Resources */,
 				BC268E591AE79F8D00ACD5B2 /* fenxiang@3x.png in Resources */,
+				BC4955981AF1D18D00E28B7B /* OKHomeDetailCell.xib in Resources */,
 				BC26902D1AE79F8D00ACD5B2 /* url_ico@3x.png in Resources */,
 				BC268DDA1AE79F8D00ACD5B2 /* chizhu_ico@2x.png in Resources */,
 				BC268F6B1AE79F8D00ACD5B2 /* nav_mine_on@2x.png in Resources */,
@@ -4486,6 +4519,7 @@
 				BC368F9C1AE9E236001ADC88 /* UIImageView+WebCache.m in Sources */,
 				BCBD94471AF07D6500F98F23 /* OKActivityCarefullyChosenCell.m in Sources */,
 				BCDFF3081AED0F9600E4B296 /* OKShopInfoCommentModel.m in Sources */,
+				BC4955891AF1CE3F00E28B7B /* OKHomeDetailViewController.m in Sources */,
 				BC2689AB1AE79A5100ACD5B2 /* OKTabbarView.m in Sources */,
 				BC63CE131AEBD05C00A7C2C3 /* OKNearListViewController.m in Sources */,
 				BC66016E1AE8CF0800113350 /* AFURLSessionManager.m in Sources */,
@@ -4503,6 +4537,7 @@
 				BC368FA41AEA257E001ADC88 /* UIView+PSBTransitionAnimation.m in Sources */,
 				BC6601671AE8CF0800113350 /* AFHTTPRequestOperationManager.m in Sources */,
 				BC44DD291AEE21E5008C31B9 /* OKFindShopModel.m in Sources */,
+				BC49558C1AF1CFC300E28B7B /* OKHomeDetailModel.m in Sources */,
 				BC9872F71AE7381500C45D71 /* main.m in Sources */,
 				BC6601691AE8CF0800113350 /* AFNetworkReachabilityManager.m in Sources */,
 				BC44DD1E1AEE0FA5008C31B9 /* OKFindFriendCell.m in Sources */,
@@ -4530,17 +4565,20 @@
 				BC44DD261AEE19C2008C31B9 /* OKFindShopViewController.m in Sources */,
 				BCDFF2FF1AED0EB700E4B296 /* OKShopInfoModel.m in Sources */,
 				BC102DEF1AF0B3DB00C5B13C /* OKActivityFreeCellTableViewCell.m in Sources */,
+				BC4955A31AF1DF8D00E28B7B /* OKHomeDetailCommentModel.m in Sources */,
 				BCDFF30B1AED0FC200E4B296 /* OKShopInfoTopicModel.m in Sources */,
 				BC66017E1AE8EF9400113350 /* OKTools.m in Sources */,
 				BC60877D1AE7A8B90054A1E4 /* OKTabBarButton.m in Sources */,
 				BC44DD3F1AEE5DE5008C31B9 /* OKHomeInfoImageViewController.m in Sources */,
 				BC6AC5D71AEFBD57004297FA /* MJRefreshGifHeader.m in Sources */,
 				BC6AC5DB1AEFBD57004297FA /* UIScrollView+MJExtension.m in Sources */,
+				BC49559F1AF1DC7400E28B7B /* OKHomeDetailCommentCell.m in Sources */,
 				BCDFF3021AED0EE500E4B296 /* OKShopInfoImagesModel.m in Sources */,
 				BC368F991AE9E236001ADC88 /* UIImage+MultiFormat.m in Sources */,
 				BC102DEB1AF0B2BD00C5B13C /* OKActivityFreeModel.m in Sources */,
 				BC368F941AE9E236001ADC88 /* SDWebImageDownloaderOperation.m in Sources */,
 				BC66016D1AE8CF0800113350 /* AFURLResponseSerialization.m in Sources */,
+				BC4955971AF1D18D00E28B7B /* OKHomeDetailCell.m in Sources */,
 				BC6087841AE7BA5D0054A1E4 /* OKActivityViewController.m in Sources */,
 				BC6601741AE8D77800113350 /* OKDownloadManager.m in Sources */,
 				BC44DD0B1AEDD7FD008C31B9 /* OKShopInfoTipsCell.m in Sources */,

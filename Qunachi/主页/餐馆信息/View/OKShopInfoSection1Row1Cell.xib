@@ -74,29 +74,25 @@
                         <rect key="frame" x="10" y="192" width="310" height="1"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkg-vC-lC9">
-                        <rect key="frame" x="177" y="204" width="120" height="20"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="我要约饭">
-                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </state>
-                    </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_dizhutuijian.png" translatesAutoresizingMaskIntoConstraints="NO" id="8V0-j4-U18">
                         <rect key="frame" x="14" y="9" width="25" height="31"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_camera_gray.png" translatesAutoresizingMaskIntoConstraints="NO" id="H6b-LU-ZQ5">
                         <rect key="frame" x="77" y="79" width="21" height="21"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAz-C9-ftl">
-                        <rect key="frame" x="26" y="204" width="117" height="20"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="发美食">
-                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </state>
-                    </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_map.png" translatesAutoresizingMaskIntoConstraints="NO" id="8gk-Cc-zio">
                         <rect key="frame" x="276" y="112" width="30" height="25"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAz-C9-ftl">
+                        <rect key="frame" x="102" y="203" width="117" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="联系饭店">
+                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="callShop:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lbD-t0-2v5"/>
+                        </connections>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
@@ -109,7 +105,6 @@
                 <outlet property="sendFoodButton" destination="PAz-C9-ftl" id="gWx-xU-UzP"/>
                 <outlet property="shopNameLabel" destination="NwC-aL-58E" id="ykk-tr-9xY"/>
                 <outlet property="tastRateLabel" destination="G0V-gr-0pn" id="hSF-hE-sWw"/>
-                <outlet property="togetherButton" destination="fkg-vC-lC9" id="nCW-St-Cyd"/>
             </connections>
             <point key="canvasLocation" x="140" y="235"/>
         </tableViewCell>

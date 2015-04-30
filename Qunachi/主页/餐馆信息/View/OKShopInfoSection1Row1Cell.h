@@ -12,6 +12,7 @@
 @protocol OKShopInfoSection1Delegate <NSObject>
 
 -(void)imageClick;
+-(void)phoneClickWithPhoneNumber:(NSArray *)numArray;
 
 @end
 

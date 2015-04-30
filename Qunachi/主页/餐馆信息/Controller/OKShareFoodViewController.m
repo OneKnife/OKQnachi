@@ -63,7 +63,7 @@
 {
     if (indexPath.section==0) {
         if (indexPath.row==0) {
-            static NSString * cellId=@"shareFoodModel";
+            static NSString * cellId=@"shareFoodCell";
             OKShopShareFoodSection1row1Cell * cell =[tableView dequeueReusableCellWithIdentifier:cellId];
             
             if (cell==nil) {

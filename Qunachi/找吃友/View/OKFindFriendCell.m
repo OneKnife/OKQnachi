@@ -22,6 +22,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 - (IBAction)buttonClick:(id)sender {
     

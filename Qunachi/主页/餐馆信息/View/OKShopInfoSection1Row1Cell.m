@@ -28,7 +28,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *sendFoodButton;
 
-@property (weak, nonatomic) IBOutlet UIButton *togetherButton;
 
 
 
@@ -42,11 +41,12 @@
     
     image =[image stretchableImageWithLeftCapWidth:5 topCapHeight:5];
     [self.sendFoodButton setBackgroundImage:image forState:UIControlStateNormal];
-    [self.togetherButton setBackgroundImage:image forState:UIControlStateNormal];
     UIControl * imageControl =[[UIControl alloc] initWithFrame:self.coverImageView.frame];
     //调用代理的方法
     [imageControl addTarget:self.delegate action:@selector(imageClick) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:imageControl];
+    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -110,6 +110,16 @@
     self.phoneLabel.text = phoneStr;
     
 }
+- (IBAction)callShop:(id)sender {
+    
+     [self.delegate phoneClickWithPhoneNumber:_model.Phone];
+    
+}
+
+
+
+
+
 
 
 @end

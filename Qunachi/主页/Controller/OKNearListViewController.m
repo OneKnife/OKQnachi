@@ -386,7 +386,7 @@
 
 -(void)loadNewData
 {
-    [_dataArray removeAllObjects];
+    
     
     AFHTTPSessionManager * manager =[AFHTTPSessionManager manager];
     
@@ -409,6 +409,7 @@
     
     [manager POST:[NSString stringWithFormat:NEAR_LIST_URL] parameters:param success:^(NSURLSessionDataTask *task, NSDictionary * responseObject) {
         
+        [_dataArray removeAllObjects];
         for (NSDictionary * itemDict in responseObject[@"result"][@"List"]) {
             OKNearListModel * model =[[OKNearListModel alloc] init];
             [model setValuesForKeysWithDictionary:itemDict];

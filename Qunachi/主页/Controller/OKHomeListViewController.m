@@ -8,7 +8,7 @@
 
 #import "OKHomeListViewController.h"
 #import "OKHomeListTableViewCell.h"
-
+#import "OKHomeDetailViewController.h"
 
 @interface OKHomeListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -67,6 +67,12 @@
     
     return cell;
 
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    OKHomeDetailViewController * dvc =[[OKHomeDetailViewController alloc] init];
+    dvc.datingId = [self.listModelArray[indexPath.row] DatingId];
+    [self.navigationController pushViewController:dvc animated:YES];
 }
 
 
