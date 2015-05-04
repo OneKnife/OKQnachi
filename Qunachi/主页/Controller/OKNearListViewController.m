@@ -49,7 +49,7 @@
     
     [self createTableView];
     
-
+    self.title=@"附近";
    
 }
 
@@ -61,6 +61,7 @@
 
 -(void)createTableView
 {
+        self.automaticallyAdjustsScrollViewInsets=NO;
     _tableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-108) style:UITableViewStylePlain];
     
     self.automaticallyAdjustsScrollViewInsets =NO;

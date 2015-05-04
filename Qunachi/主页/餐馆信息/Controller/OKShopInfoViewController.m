@@ -33,14 +33,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self createTableView];
+    self.view.backgroundColor=[UIColor whiteColor];
+   
     [self model];
+    
+    self.title=@"餐厅";
 }
 
 #pragma mark - tableView
 -(void)createTableView
 {
-    _tableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+    self.automaticallyAdjustsScrollViewInsets=NO;
+    _tableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     
@@ -169,6 +173,10 @@
             
             _model =[[OKShopInfoModel alloc] init];
             _model.dict=responseObject[@"result"];
+            
+            if (!_tableView) {
+                 [self createTableView];
+            }
             
             [_tableView reloadData];
             

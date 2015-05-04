@@ -11,6 +11,7 @@
 #import "OKActivityCarefullyChosenModel.h"
 #import "AFNetworking.h"
 #import "MJRefresh.h"
+#import "OKActivityWebViewController.h"
 
 #define LIST_URL @"http://api.qunachi.com/v5.2.0/Mobile/Feature/getList?appid=1&hash=acc2b424a4e5454279444a8ea38f2198&deviceid=172fe65995535e9670307f288722585&channel=appstore&cid=%d&limit=%d&offset=%ld&type=0"
 
@@ -35,6 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self createTableView];
+    self.title=@"精选";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -151,5 +153,12 @@
     }
     
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    OKActivityWebViewController * webController =[[OKActivityWebViewController alloc] init];
+    webController.url=[self.dataArray[indexPath.row] Url];
+    [self.navigationController pushViewController:webController animated:YES];
+}
+
 
 @end

@@ -16,7 +16,7 @@
 #import "OKNavigationController.h"
 #import "OKNearListViewController.h"
 #import "OKFindShopViewController.h"
-
+#import "OKNearFriendViewController.h"
 
 @interface OKTabbarController ()<OKTabBarViewDelegate>
 
@@ -76,8 +76,9 @@
     
     
     
-    OKFindFriendViewController * findFriendController =[[OKFindFriendViewController alloc] init];
-    [self setChilViewController:findFriendController WithImageName:@"nav_message" selectImageName:@"nav_message_on" title:@"好友"];
+//    OKFindFriendViewController * findFriendController =[[OKFindFriendViewController alloc] init];
+    OKNearFriendViewController * nearFriendController=[[OKNearFriendViewController alloc] init];
+    [self setChilViewController:nearFriendController WithImageName:@"nav_message" selectImageName:@"nav_message_on" title:@"附近推荐"];
     
     OKActivityViewController * activityController = [[OKActivityViewController alloc]init];
     [self setChilViewController:activityController WithImageName:@"nav_mine" selectImageName:@"nav_mine_on" title:@"活动"];

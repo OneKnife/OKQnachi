@@ -113,12 +113,14 @@
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    _timer.fireDate=[NSDate distantFuture];
+//    _timer.fireDate=[NSDate distantFuture];
+    [_timer invalidate];
 }
 
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
 {
-    _timer.fireDate=[NSDate distantPast];
+//    _timer.fireDate=[NSDate distantPast];
+    _timer =[NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(timeClick) userInfo:nil repeats:YES];
 }
 
 

@@ -10,6 +10,8 @@
 #include "OKActivityFreeCellTableViewCell.h"
 #include "OKActivityFreeModel.h"
 #import "AFNetworking.h"
+#import "OKActivityWebViewController.h"
+#import "OKActivityFreeDetailController.h"
 
 #define FREE_URL @"http://api.qunachi.com/v5.2.0/Act/Eat/getList?appid=1&hash=4171cccab624735d169ba0ddf6b98b4a&deviceid=172fe65995535e9670307f288722585&channel=appstore&cid=2&limit=20&offset=0"
 
@@ -24,6 +26,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title=@"免费试吃";
     
     self.view.backgroundColor=[UIColor blackColor];
     [self createTableView];
@@ -97,6 +101,13 @@
     
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    OKActivityFreeDetailController * freeDetailVC =[[OKActivityFreeDetailController alloc] init];
+    freeDetailVC.Id=[_dataArray[indexPath.row] Id];
+    [self.navigationController pushViewController:freeDetailVC animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {

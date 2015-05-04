@@ -26,7 +26,7 @@
         [self createBanner];
         self.backgroundColor=[UIColor whiteColor];
         self.userInteractionEnabled = YES;
-        self.frame=CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-44);
+        self.frame=CGRectMake(0, 44, SCREEN_WIDTH, SCREEN_HEIGHT-88);
     }
     return self;
 }

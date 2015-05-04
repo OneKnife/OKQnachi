@@ -65,7 +65,7 @@
     }
     else if (section==1)
     {
-        return 2;
+        return 1;
     }
     else
     {
@@ -81,6 +81,7 @@
     
     if (cell==nil) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
     }
     
     if (indexPath.section==0) {

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,8 +14,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lS7-uZ-lh6">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lS7-uZ-lh6">
                         <rect key="frame" x="8" y="9" width="84" height="84"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="84" id="KHz-29-vTN"/>
+                            <constraint firstAttribute="height" constant="84" id="xv2-bO-p2F"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="这里是店铺名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwC-aL-58E">
                         <rect key="frame" x="100" y="11" width="212" height="21"/>
@@ -80,11 +85,15 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_camera_gray.png" translatesAutoresizingMaskIntoConstraints="NO" id="H6b-LU-ZQ5">
                         <rect key="frame" x="77" y="79" width="21" height="21"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_map.png" translatesAutoresizingMaskIntoConstraints="NO" id="8gk-Cc-zio">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg_map.png" translatesAutoresizingMaskIntoConstraints="NO" id="8gk-Cc-zio">
                         <rect key="frame" x="276" y="112" width="30" height="25"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAz-C9-ftl">
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAz-C9-ftl">
                         <rect key="frame" x="102" y="203" width="117" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="117" id="7S8-Ln-qn5"/>
+                            <constraint firstAttribute="height" constant="20" id="GCu-k2-mKR"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="联系饭店">
                             <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -94,6 +103,10 @@
                         </connections>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerX" secondItem="PAz-C9-ftl" secondAttribute="centerX" id="LVY-xG-Qed"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8gk-Cc-zio" secondAttribute="trailing" constant="6" id="xJb-Kj-AjH"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="addressLabel" destination="yfE-E7-k0Z" id="GUa-UL-awg"/>

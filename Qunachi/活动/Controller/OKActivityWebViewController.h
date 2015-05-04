@@ -11,5 +11,6 @@
 @interface OKActivityWebViewController : UIViewController
 
 @property (nonatomic,copy) NSString * url;
+@property (nonatomic,strong) UIWebView * webView;
 
 @end

@@ -13,13 +13,26 @@
 @end
 
 @implementation OKActivityWebViewController
+{
+//    UIWebView * _webView;
+}
+
+-(instancetype)init
+{
+    if (self=[super init]) {
+        
+        self.webView=[[UIWebView alloc] initWithFrame:CGRectMake(0, -54, SCREEN_WIDTH, SCREEN_HEIGHT+64)];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIWebView * webView =[[UIWebView alloc] initWithFrame:CGRectMake(0, -54, SCREEN_WIDTH, SCREEN_HEIGHT+70)];
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
-    [self.view addSubview:webView];
+
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
+    _webView.scrollView.bounces=NO;
+    [self.view addSubview:_webView];
 }
 
 - (void)didReceiveMemoryWarning {

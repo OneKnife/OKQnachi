@@ -6,16 +6,15 @@
 //  Copyright (c) 2015年 zyc. All rights reserved.
 //
 
-#import "OKNearListTableViewCell.h"
+#import "OKFindShopHotShopCell.h"
 #import "UIImageView+WebCache.h"
 
-@interface OKNearListTableViewCell()
+@interface OKFindShopHotShopCell()
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (weak, nonatomic) IBOutlet UILabel *shopNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *vipRecomImageVIew;
 
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
-@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *attrTasteLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *recommentLabel;
@@ -24,7 +23,7 @@
 
 @end
 
-@implementation OKNearListTableViewCell
+@implementation OKFindShopHotShopCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -38,7 +37,7 @@
     // Configure the view for the selected state
 }
 
--(void)setModel:(OKNearListModel *)model
+-(void)setModel:(OKFindShopHotShopModel *)model
 {
     _model=model;
     
@@ -54,9 +53,9 @@
     self.shopNameLabel.frame=nameFrame;
 //    NSLog(@"%f",self.shopNameLabel.frame.size.width);
     
-    if (_model.VipRecommCount==0) {
+    if (_model.VipRecommCount.intValue==0) {
         self.vipRecomImageVIew.hidden=YES;
-     
+      
     }
     else
     {
@@ -67,21 +66,19 @@
     }
     
     self.addressLabel.text=_model.Address;
-    self.distanceLabel.text=[NSString stringWithFormat:@"%ld 米",_model.Distance];
+
     if(_model.AttrTasteRate==0)
     {
         self.attrTasteLabel.text=@"口味暂无";
     }
     else
     {
-        NSMutableAttributedString * attrString =[[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"口味 %.1lf",_model.AttrTasteRate]];
+        NSMutableAttributedString * attrString =[[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"口味 %.1f",_model.AttrTasteRate.floatValue]];
 
         [attrString addAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]} range:NSMakeRange(0, attrString.length)];
         [attrString addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} range:NSMakeRange(3, 3)];
         
         self.attrTasteLabel.attributedText=attrString;
-        
-        
         
     }
     

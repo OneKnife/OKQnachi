@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC01A6061AF71908001C5DBE /* OKFindShopHotShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01A6051AF71908001C5DBE /* OKFindShopHotShopViewController.m */; };
+		BC01A6091AF7195F001C5DBE /* OKFindShopHotShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01A6081AF7195F001C5DBE /* OKFindShopHotShopModel.m */; };
+		BC01A60D1AF71BAC001C5DBE /* OKFindShopHotShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC01A60B1AF71BAC001C5DBE /* OKFindShopHotShopCell.m */; };
+		BC01A60E1AF71BAC001C5DBE /* OKFindShopHotShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC01A60C1AF71BAC001C5DBE /* OKFindShopHotShopCell.xib */; };
 		BC102DE81AF0B22D00C5B13C /* OKActivityFreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC102DE71AF0B22D00C5B13C /* OKActivityFreeViewController.m */; };
 		BC102DEB1AF0B2BD00C5B13C /* OKActivityFreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC102DEA1AF0B2BD00C5B13C /* OKActivityFreeModel.m */; };
 		BC102DEF1AF0B3DB00C5B13C /* OKActivityFreeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC102DED1AF0B3DB00C5B13C /* OKActivityFreeCellTableViewCell.m */; };
 		BC102DF01AF0B3DB00C5B13C /* OKActivityFreeCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC102DEE1AF0B3DB00C5B13C /* OKActivityFreeCellTableViewCell.xib */; };
+		BC20D9C31AF5DF2E00F84045 /* OKNearFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20D9C21AF5DF2E00F84045 /* OKNearFriendViewController.m */; };
+		BC20D9C61AF5DF4E00F84045 /* OKNearFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20D9C51AF5DF4E00F84045 /* OKNearFriendModel.m */; };
+		BC20D9CA1AF5DF7500F84045 /* OKNearFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20D9C81AF5DF7500F84045 /* OKNearFriendCell.m */; };
+		BC20D9CB1AF5DF7500F84045 /* OKNearFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC20D9C91AF5DF7500F84045 /* OKNearFriendCell.xib */; };
+		BC20D9D11AF5E75700F84045 /* OKNearFriendLastActModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC20D9D01AF5E75700F84045 /* OKNearFriendLastActModel.m */; };
 		BC2689AB1AE79A5100ACD5B2 /* OKTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2689AA1AE79A5100ACD5B2 /* OKTabbarView.m */; };
 		BC268D0F1AE79F8D00ACD5B2 /* 110110.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2689AD1AE79F8400ACD5B2 /* 110110.png */; };
 		BC268D101AE79F8D00ACD5B2 /* 118.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2689AE1AE79F8400ACD5B2 /* 118.png */; };
@@ -914,6 +923,11 @@
 		BC49559F1AF1DC7400E28B7B /* OKHomeDetailCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC49559D1AF1DC7400E28B7B /* OKHomeDetailCommentCell.m */; };
 		BC4955A01AF1DC7400E28B7B /* OKHomeDetailCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC49559E1AF1DC7400E28B7B /* OKHomeDetailCommentCell.xib */; };
 		BC4955A31AF1DF8D00E28B7B /* OKHomeDetailCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4955A21AF1DF8D00E28B7B /* OKHomeDetailCommentModel.m */; };
+		BC5E51941AF4771200652DED /* OKActivityFreeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E51931AF4771200652DED /* OKActivityFreeDetailModel.m */; };
+		BC5E51981AF47C0000652DED /* OKActivityFreeDetailTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E51961AF47C0000652DED /* OKActivityFreeDetailTopCell.m */; };
+		BC5E51991AF47C0000652DED /* OKActivityFreeDetailTopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5E51971AF47C0000652DED /* OKActivityFreeDetailTopCell.xib */; };
+		BC5E519C1AF48B5E00652DED /* OKActivityFreeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E519B1AF48B5E00652DED /* OKActivityFreeDetailCell.m */; };
+		BC5E519F1AF48C1000652DED /* OKActivityFreeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5E519E1AF48C1000652DED /* OKActivityFreeDetailController.m */; };
 		BC60877D1AE7A8B90054A1E4 /* OKTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC60877C1AE7A8B90054A1E4 /* OKTabBarButton.m */; };
 		BC6087811AE7B9B20054A1E4 /* OKFindFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6087801AE7B9B20054A1E4 /* OKFindFriendViewController.m */; };
 		BC6087841AE7BA5D0054A1E4 /* OKActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6087831AE7BA5D0054A1E4 /* OKActivityViewController.m */; };
@@ -994,6 +1008,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC01A6041AF71908001C5DBE /* OKFindShopHotShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKFindShopHotShopViewController.h; sourceTree = "<group>"; };
+		BC01A6051AF71908001C5DBE /* OKFindShopHotShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKFindShopHotShopViewController.m; sourceTree = "<group>"; };
+		BC01A6071AF7195F001C5DBE /* OKFindShopHotShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKFindShopHotShopModel.h; sourceTree = "<group>"; };
+		BC01A6081AF7195F001C5DBE /* OKFindShopHotShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKFindShopHotShopModel.m; sourceTree = "<group>"; };
+		BC01A60A1AF71BAC001C5DBE /* OKFindShopHotShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKFindShopHotShopCell.h; sourceTree = "<group>"; };
+		BC01A60B1AF71BAC001C5DBE /* OKFindShopHotShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKFindShopHotShopCell.m; sourceTree = "<group>"; };
+		BC01A60C1AF71BAC001C5DBE /* OKFindShopHotShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OKFindShopHotShopCell.xib; sourceTree = "<group>"; };
 		BC102DE61AF0B22D00C5B13C /* OKActivityFreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKActivityFreeViewController.h; sourceTree = "<group>"; };
 		BC102DE71AF0B22D00C5B13C /* OKActivityFreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKActivityFreeViewController.m; sourceTree = "<group>"; };
 		BC102DE91AF0B2BD00C5B13C /* OKActivityFreeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKActivityFreeModel.h; sourceTree = "<group>"; };
@@ -1001,6 +1022,15 @@
 		BC102DEC1AF0B3DB00C5B13C /* OKActivityFreeCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKActivityFreeCellTableViewCell.h; sourceTree = "<group>"; };
 		BC102DED1AF0B3DB00C5B13C /* OKActivityFreeCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKActivityFreeCellTableViewCell.m; sourceTree = "<group>"; };
 		BC102DEE1AF0B3DB00C5B13C /* OKActivityFreeCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OKActivityFreeCellTableViewCell.xib; sourceTree = "<group>"; };
+		BC20D9C11AF5DF2E00F84045 /* OKNearFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKNearFriendViewController.h; sourceTree = "<group>"; };
+		BC20D9C21AF5DF2E00F84045 /* OKNearFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKNearFriendViewController.m; sourceTree = "<group>"; };
+		BC20D9C41AF5DF4E00F84045 /* OKNearFriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKNearFriendModel.h; sourceTree = "<group>"; };
+		BC20D9C51AF5DF4E00F84045 /* OKNearFriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKNearFriendModel.m; sourceTree = "<group>"; };
+		BC20D9C71AF5DF7500F84045 /* OKNearFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKNearFriendCell.h; sourceTree = "<group>"; };
+		BC20D9C81AF5DF7500F84045 /* OKNearFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKNearFriendCell.m; sourceTree = "<group>"; };
+		BC20D9C91AF5DF7500F84045 /* OKNearFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OKNearFriendCell.xib; sourceTree = "<group>"; };
+		BC20D9CF1AF5E75700F84045 /* OKNearFriendLastActModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKNearFriendLastActModel.h; sourceTree = "<group>"; };
+		BC20D9D01AF5E75700F84045 /* OKNearFriendLastActModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKNearFriendLastActModel.m; sourceTree = "<group>"; };
 		BC2689A91AE79A5100ACD5B2 /* OKTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKTabbarView.h; sourceTree = "<group>"; };
 		BC2689AA1AE79A5100ACD5B2 /* OKTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKTabbarView.m; sourceTree = "<group>"; };
 		BC2689AD1AE79F8400ACD5B2 /* 110110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 110110.png; sourceTree = "<group>"; };
@@ -1948,6 +1978,15 @@
 		BC49559E1AF1DC7400E28B7B /* OKHomeDetailCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OKHomeDetailCommentCell.xib; sourceTree = "<group>"; };
 		BC4955A11AF1DF8D00E28B7B /* OKHomeDetailCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKHomeDetailCommentModel.h; sourceTree = "<group>"; };
 		BC4955A21AF1DF8D00E28B7B /* OKHomeDetailCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKHomeDetailCommentModel.m; sourceTree = "<group>"; };
+		BC5E51921AF4771200652DED /* OKActivityFreeDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKActivityFreeDetailModel.h; sourceTree = "<group>"; };
+		BC5E51931AF4771200652DED /* OKActivityFreeDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKActivityFreeDetailModel.m; sourceTree = "<group>"; };
+		BC5E51951AF47C0000652DED /* OKActivityFreeDetailTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKActivityFreeDetailTopCell.h; sourceTree = "<group>"; };
+		BC5E51961AF47C0000652DED /* OKActivityFreeDetailTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKActivityFreeDetailTopCell.m; sourceTree = "<group>"; };
+		BC5E51971AF47C0000652DED /* OKActivityFreeDetailTopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OKActivityFreeDetailTopCell.xib; sourceTree = "<group>"; };
+		BC5E519A1AF48B5E00652DED /* OKActivityFreeDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKActivityFreeDetailCell.h; sourceTree = "<group>"; };
+		BC5E519B1AF48B5E00652DED /* OKActivityFreeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKActivityFreeDetailCell.m; sourceTree = "<group>"; };
+		BC5E519D1AF48C1000652DED /* OKActivityFreeDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKActivityFreeDetailController.h; sourceTree = "<group>"; };
+		BC5E519E1AF48C1000652DED /* OKActivityFreeDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKActivityFreeDetailController.m; sourceTree = "<group>"; };
 		BC60877B1AE7A8B90054A1E4 /* OKTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKTabBarButton.h; sourceTree = "<group>"; };
 		BC60877C1AE7A8B90054A1E4 /* OKTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKTabBarButton.m; sourceTree = "<group>"; };
 		BC60877E1AE7ABDF0054A1E4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -3021,6 +3060,8 @@
 			children = (
 				BC44DD241AEE19C2008C31B9 /* OKFindShopViewController.h */,
 				BC44DD251AEE19C2008C31B9 /* OKFindShopViewController.m */,
+				BC01A6041AF71908001C5DBE /* OKFindShopHotShopViewController.h */,
+				BC01A6051AF71908001C5DBE /* OKFindShopHotShopViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3030,6 +3071,8 @@
 			children = (
 				BC44DD271AEE21E5008C31B9 /* OKFindShopModel.h */,
 				BC44DD281AEE21E5008C31B9 /* OKFindShopModel.m */,
+				BC01A6071AF7195F001C5DBE /* OKFindShopHotShopModel.h */,
+				BC01A6081AF7195F001C5DBE /* OKFindShopHotShopModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3037,6 +3080,9 @@
 		BC44DD231AEE198C008C31B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC01A60A1AF71BAC001C5DBE /* OKFindShopHotShopCell.h */,
+				BC01A60B1AF71BAC001C5DBE /* OKFindShopHotShopCell.m */,
+				BC01A60C1AF71BAC001C5DBE /* OKFindShopHotShopCell.xib */,
 				BC44DD2A1AEE2285008C31B9 /* OKFindShopCell.h */,
 				BC44DD2B1AEE2285008C31B9 /* OKFindShopCell.m */,
 				BC44DD2C1AEE2285008C31B9 /* OKFindShopCell.xib */,
@@ -3249,6 +3295,8 @@
 				BC6AC52E1AEF8296004297FA /* OKActivityCarefullyChosenViewController.m */,
 				BC102DE61AF0B22D00C5B13C /* OKActivityFreeViewController.h */,
 				BC102DE71AF0B22D00C5B13C /* OKActivityFreeViewController.m */,
+				BC5E519D1AF48C1000652DED /* OKActivityFreeDetailController.h */,
+				BC5E519E1AF48C1000652DED /* OKActivityFreeDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3262,6 +3310,8 @@
 				BCBD94421AF07BD600F98F23 /* OKActivityCarefullyChosenModel.m */,
 				BC102DE91AF0B2BD00C5B13C /* OKActivityFreeModel.h */,
 				BC102DEA1AF0B2BD00C5B13C /* OKActivityFreeModel.m */,
+				BC5E51921AF4771200652DED /* OKActivityFreeDetailModel.h */,
+				BC5E51931AF4771200652DED /* OKActivityFreeDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3277,6 +3327,11 @@
 				BC102DEC1AF0B3DB00C5B13C /* OKActivityFreeCellTableViewCell.h */,
 				BC102DED1AF0B3DB00C5B13C /* OKActivityFreeCellTableViewCell.m */,
 				BC102DEE1AF0B3DB00C5B13C /* OKActivityFreeCellTableViewCell.xib */,
+				BC5E51951AF47C0000652DED /* OKActivityFreeDetailTopCell.h */,
+				BC5E51961AF47C0000652DED /* OKActivityFreeDetailTopCell.m */,
+				BC5E51971AF47C0000652DED /* OKActivityFreeDetailTopCell.xib */,
+				BC5E519A1AF48B5E00652DED /* OKActivityFreeDetailCell.h */,
+				BC5E519B1AF48B5E00652DED /* OKActivityFreeDetailCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3299,6 +3354,8 @@
 				BC44DD2F1AEE33C4008C31B9 /* OKFriendViewController.h */,
 				BC44DD301AEE33C4008C31B9 /* OKFriendViewController.m */,
 				BC44DD311AEE33C4008C31B9 /* OKFriendViewController.xib */,
+				BC20D9C11AF5DF2E00F84045 /* OKNearFriendViewController.h */,
+				BC20D9C21AF5DF2E00F84045 /* OKNearFriendViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3310,6 +3367,10 @@
 				BC44DD191AEE0C89008C31B9 /* OKFindFriendModel.m */,
 				BC44DD341AEE3E4B008C31B9 /* OKFriendModel.h */,
 				BC44DD351AEE3E4B008C31B9 /* OKFriendModel.m */,
+				BC20D9C41AF5DF4E00F84045 /* OKNearFriendModel.h */,
+				BC20D9C51AF5DF4E00F84045 /* OKNearFriendModel.m */,
+				BC20D9CF1AF5E75700F84045 /* OKNearFriendLastActModel.h */,
+				BC20D9D01AF5E75700F84045 /* OKNearFriendLastActModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3320,6 +3381,9 @@
 				BC44DD1B1AEE0FA5008C31B9 /* OKFindFriendCell.h */,
 				BC44DD1C1AEE0FA5008C31B9 /* OKFindFriendCell.m */,
 				BC44DD1D1AEE0FA5008C31B9 /* OKFindFriendCell.xib */,
+				BC20D9C71AF5DF7500F84045 /* OKNearFriendCell.h */,
+				BC20D9C81AF5DF7500F84045 /* OKNearFriendCell.m */,
+				BC20D9C91AF5DF7500F84045 /* OKNearFriendCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3891,6 +3955,8 @@
 				BC268D361AE79F8D00ACD5B2 /* appguide2.png in Resources */,
 				BC2690171AE79F8D00ACD5B2 /* theLife_icon.png in Resources */,
 				BC268F9C1AE79F8D00ACD5B2 /* regist_mima_ico@3x.png in Resources */,
+				BC20D9CB1AF5DF7500F84045 /* OKNearFriendCell.xib in Resources */,
+				BC01A60E1AF71BAC001C5DBE /* OKFindShopHotShopCell.xib in Resources */,
 				BC268E9D1AE79F8D00ACD5B2 /* ico_man_on@2x.png in Resources */,
 				BC268F951AE79F8D00ACD5B2 /* red_background@2x.png in Resources */,
 				BC268FB71AE79F8D00ACD5B2 /* search_bg.png in Resources */,
@@ -4099,6 +4165,7 @@
 				BC268D421AE79F8D00ACD5B2 /* beijingtu@2x.png in Resources */,
 				BC268DFC1AE79F8D00ACD5B2 /* choose_shop.png in Resources */,
 				BC268D721AE79F8D00ACD5B2 /* btn_collect_jiucuo.png in Resources */,
+				BC5E51991AF47C0000652DED /* OKActivityFreeDetailTopCell.xib in Resources */,
 				BC268DB01AE79F8D00ACD5B2 /* btnBig_green@3x.png in Resources */,
 				BC268F181AE79F8D00ACD5B2 /* jptd_ico@3x.png in Resources */,
 				BC268E421AE79F8D00ACD5B2 /* eatry_phone.png in Resources */,
@@ -4527,6 +4594,7 @@
 				BCDFF30E1AED0FFF00E4B296 /* OKShopInfoShareListModel.m in Sources */,
 				BC44DD2D1AEE2285008C31B9 /* OKFindShopCell.m in Sources */,
 				BC368F8F1AE9E236001ADC88 /* NSData+ImageContentType.m in Sources */,
+				BC01A6091AF7195F001C5DBE /* OKFindShopHotShopModel.m in Sources */,
 				BC6A484A1AE792A8007127B7 /* OKTabbarController.m in Sources */,
 				BCDFF2F11AED04EA00E4B296 /* OKShopInfoSection1Row1Cell.m in Sources */,
 				BC6AC5DA1AEFBD57004297FA /* MJRefreshLegendHeader.m in Sources */,
@@ -4546,21 +4614,26 @@
 				BC6AC5D41AEFBD57004297FA /* MJRefreshConst.m in Sources */,
 				BCDFF3051AED0F4400E4B296 /* OKShopInfoTagsModel.m in Sources */,
 				BC368F9B1AE9E236001ADC88 /* UIImageView+HighlightedWebCache.m in Sources */,
+				BC5E519F1AF48C1000652DED /* OKActivityFreeDetailController.m in Sources */,
 				BC6A48441AE79220007127B7 /* OKRootViewController.m in Sources */,
 				BC87E6AC1AEC74AF002C9CB6 /* OKNearListTableViewCell.m in Sources */,
 				BC44DD421AEE5EDB008C31B9 /* OKShopInfoImageScrollView.m in Sources */,
 				BC6601511AE8887B00113350 /* OKNavigationController.m in Sources */,
 				BC44DD1A1AEE0C89008C31B9 /* OKFindFriendModel.m in Sources */,
 				BC368F951AE9E236001ADC88 /* SDWebImageManager.m in Sources */,
+				BC01A60D1AF71BAC001C5DBE /* OKFindShopHotShopCell.m in Sources */,
 				BC66017B1AE8EEB600113350 /* OKWelcomeViewController.m in Sources */,
 				BC66016A1AE8CF0800113350 /* AFSecurityPolicy.m in Sources */,
 				BC6AC5DC1AEFBD57004297FA /* UIScrollView+MJRefresh.m in Sources */,
 				BC44DD501AEE78B4008C31B9 /* OKShopShareFoodCommentModel.m in Sources */,
 				BC6087811AE7B9B20054A1E4 /* OKFindFriendViewController.m in Sources */,
+				BC5E51941AF4771200652DED /* OKActivityFreeDetailModel.m in Sources */,
 				BC368F981AE9E236001ADC88 /* UIImage+GIF.m in Sources */,
 				BC6AC5D31AEFBD57004297FA /* MJRefreshComponent.m in Sources */,
+				BC5E51981AF47C0000652DED /* OKActivityFreeDetailTopCell.m in Sources */,
 				BC3754931AECC59500FC4330 /* OKNearMapView.m in Sources */,
 				BC44DD491AEE6DBA008C31B9 /* OKShopShareFoodSection1row1Cell.m in Sources */,
+				BC5E519C1AF48B5E00652DED /* OKActivityFreeDetailCell.m in Sources */,
 				BC66016C1AE8CF0800113350 /* AFURLRequestSerialization.m in Sources */,
 				BC44DD261AEE19C2008C31B9 /* OKFindShopViewController.m in Sources */,
 				BCDFF2FF1AED0EB700E4B296 /* OKShopInfoModel.m in Sources */,
@@ -4583,6 +4656,8 @@
 				BC6601741AE8D77800113350 /* OKDownloadManager.m in Sources */,
 				BC44DD0B1AEDD7FD008C31B9 /* OKShopInfoTipsCell.m in Sources */,
 				BC98731E1AE73DF600C45D71 /* OKMapTest.mm in Sources */,
+				BC20D9CA1AF5DF7500F84045 /* OKNearFriendCell.m in Sources */,
+				BC20D9C61AF5DF4E00F84045 /* OKNearFriendModel.m in Sources */,
 				BC368F921AE9E236001ADC88 /* SDWebImageDecoder.m in Sources */,
 				BC6AC52F1AEF8296004297FA /* OKActivityCarefullyChosenViewController.m in Sources */,
 				BC368F9A1AE9E236001ADC88 /* UIImage+WebP.m in Sources */,
@@ -4590,6 +4665,7 @@
 				BC6601681AE8CF0800113350 /* AFHTTPSessionManager.m in Sources */,
 				BC63CE101AEBC28200A7C2C3 /* OKActivityBannerModel.m in Sources */,
 				BC6A48471AE79253007127B7 /* OKHomeViewController.m in Sources */,
+				BC20D9C31AF5DF2E00F84045 /* OKNearFriendViewController.m in Sources */,
 				BC44DD451AEE6B8F008C31B9 /* OKShareFoodViewController.m in Sources */,
 				BC44DD361AEE3E4B008C31B9 /* OKFriendModel.m in Sources */,
 				BC6AC5DD1AEFBD57004297FA /* UIView+MJExtension.m in Sources */,
@@ -4600,9 +4676,11 @@
 				BC44DD161AEDE240008C31B9 /* OKShopInfoShareListTableViewCell.m in Sources */,
 				BC368F8E1AE9E236001ADC88 /* MKAnnotationView+WebCache.m in Sources */,
 				BC63CE0D1AEBC11000A7C2C3 /* ZYCBanner.m in Sources */,
+				BC20D9D11AF5E75700F84045 /* OKNearFriendLastActModel.m in Sources */,
 				BC368F6B1AE9D3E0001ADC88 /* OKYuefanListModel.m in Sources */,
 				BC6AC5D51AEFBD57004297FA /* MJRefreshFooter.m in Sources */,
 				BC6087871AE7BAFF0054A1E4 /* OKDiscoverViewController.m in Sources */,
+				BC01A6061AF71908001C5DBE /* OKFindShopHotShopViewController.m in Sources */,
 				BCBD94431AF07BD600F98F23 /* OKActivityCarefullyChosenModel.m in Sources */,
 				BC44DD011AEDCD6F008C31B9 /* OKHomeListTableViewCell.m in Sources */,
 				BC368F901AE9E236001ADC88 /* SDImageCache.m in Sources */,

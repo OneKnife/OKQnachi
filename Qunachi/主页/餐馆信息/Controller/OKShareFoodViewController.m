@@ -27,14 +27,17 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createTableView];
+    [self model];
+    self.view.backgroundColor=[UIColor whiteColor];
 }
 
 -(void)createTableView
 {
-    _tableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-44) style:UITableViewStylePlain];
+    self.automaticallyAdjustsScrollViewInsets=NO;
+    _tableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
+    
     [self.view addSubview:_tableView];
 }
 
@@ -136,6 +139,9 @@
             
             _model.dict=responseObject[@"result"];
             
+            if (!_tableView) {
+                 [self createTableView];
+            }
             [_tableView reloadData];
             
             

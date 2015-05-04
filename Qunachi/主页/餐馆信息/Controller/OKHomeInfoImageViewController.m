@@ -23,6 +23,7 @@
 {
     OKShopInfoImageScrollView * scrollImageView =[[OKShopInfoImageScrollView alloc] init];
     scrollImageView.modelArray = self.array;
+    self.automaticallyAdjustsScrollViewInsets=NO;
     [self.view addSubview:scrollImageView];
 }
 

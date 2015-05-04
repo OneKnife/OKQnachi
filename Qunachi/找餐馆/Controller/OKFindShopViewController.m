@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 #import "OKFindShopModel.h"
 #import "OKShopInfoViewController.h"
-
+#import "OKFindShopHotShopViewController.h"
 
 
 #define FIND_SHOP_URL @"http://api.qunachi.com/v5.2.0/Search/Shop/getSuggestList?appid=1&hash=9c9777bffa23dc6778721885d1e34ea1&deviceid=172fe65995535e9670307f288722585&channel=appstore&cityid=2&keyword=%@"
@@ -39,6 +39,8 @@
     [self customNavBar];
     [self createSearchTableView];
     [self createTipsView];
+    
+    self.title=@"";
     
 }
 
@@ -214,7 +216,11 @@
 
 -(void)createTipsView
 {
-    _tipsView = [[UIView alloc] initWithFrame:CGRectMake(0, 80, SCREEN_WIDTH, 200)];
+    
+    
+    _tipsView = [[UIView alloc] initWithFrame:CGRectMake(0, 80, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    _tipsView.userInteractionEnabled=YES;
+    _tipsView.backgroundColor=[UIColor whiteColor];
     _tipsArray= @[@"情侣约会",
                   @"朋友聚餐",
                   @"家庭聚会",
@@ -238,6 +244,8 @@
             button.layer.borderColor=[UIColor blackColor].CGColor;
             button.layer.borderWidth=1;
             button.alpha=0.1;
+            button.tag=i*3+j;
+            [button addTarget:self action:@selector(tipsOnClick:) forControlEvents:UIControlEventTouchUpInside];
             [_tipsView addSubview:button];
             [_tipsButtonArray addObject:button];
         }
@@ -259,20 +267,21 @@
 -(void)timerClick
 {
     for (UIButton * button in _tipsButtonArray) {
-        [UIView animateWithDuration:3 animations:^{
+        [UIView animateWithDuration:0.5 animations:^{
    
-            button.alpha=1;
+            
+            button.alpha=0.1;
             CGRect frame = button.frame;
-            frame.origin.x+=10;
-            frame.origin.y-=10;
+            frame.origin.x-=5;
+            frame.origin.y+=5;
             button.frame=frame;
+
         } completion:^(BOOL finished) {
-            [UIView animateWithDuration:3 animations:^{
-             
-                button.alpha=0.1;
+            [UIView animateWithDuration:0.5 animations:^{
+                button.alpha=1;
                 CGRect frame = button.frame;
-                frame.origin.x-=10;
-                frame.origin.y+=10;
+                frame.origin.x+=5;
+                frame.origin.y-=5;
                 button.frame=frame;
             }];
         }];
@@ -281,7 +290,14 @@
     
 }
 
-
+-(void)tipsOnClick:(UIButton *)button
+{
+//    _searchBar.text=_tipsArray[button.tag];
+    
+    OKFindShopHotShopViewController * hotShop =[[OKFindShopHotShopViewController alloc] init];
+    hotShop.tips=_tipsArray[button.tag];
+    [self.navigationController pushViewController:hotShop animated:YES];
+}
 
 
 @end

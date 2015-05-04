@@ -36,6 +36,8 @@
     
     [self createSearchBar];
     [self createSearchTableView];
+    
+    self.title=@"找吃友";
 
     
 }

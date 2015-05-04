@@ -39,8 +39,9 @@
     [super viewDidLoad];
     
     self.view.backgroundColor=[UIColor whiteColor];
-    [self createTableView];
     [self requestData];
+    
+    self.title=@"详情";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,7 +52,8 @@
 
 -(void)createTableView
 {
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-44) style:UITableViewStylePlain];
+        self.automaticallyAdjustsScrollViewInsets=NO;
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-44) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     [self.view addSubview:_tableView];
@@ -64,6 +66,11 @@
         
 
         _model.dict = responseObject[@"result"];
+        
+        if (!_tableView) {
+            [self createTableView];
+
+        }
         
         [_tableView reloadData];
         

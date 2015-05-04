@@ -26,6 +26,8 @@
     
     self.navigationController.navigationBar.barTintColor=[UIColor orangeColor];
     
+    self.title=@"列表";
+    
 }
 -(void)setListModelArray:(NSMutableArray *)listModelArray
 {
@@ -38,7 +40,8 @@
 -(void)createTableView
 {
     
-    _tableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-44) style:UITableViewStylePlain];
+        self.automaticallyAdjustsScrollViewInsets=NO;
+    _tableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-104) style:UITableViewStylePlain];
     
     _tableView.delegate=self;
     _tableView.dataSource=self;
