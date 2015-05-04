@@ -15,9 +15,11 @@
 #import "OKHomeListViewController.h"
 #import "UIView+PSBTransitionAnimation.h"
 #import "OKNearListViewController.h"
+#import "OKFindShopHotShopViewController.h"
+#import "OKFindShopHotShopModel.h"
 
 //约！
-#define YUEFAN_URL @"http://api.qunachi.com/v5.2.0/Social/Dating/getNear?appid=1&hash=e595eaa4cf8361e1f29554c19628f258&deviceid=172fe65995535e9670307f288722585&channel=appstore&lat=%f&limit=10&lng=%f&offset=0&sex=-1"
+#define HOT_SHOP_URL @"http://api.qunachi.com/v5.2.0/Search/Shop/getShopList?appid=1&hash=8feef06577026d6fc9d0414fe106e062&deviceid=172fe65995535e9670307f288722585&channel=appstore"
 
 
 @interface OKHomeViewController ()<BMKLocationServiceDelegate>
@@ -100,8 +102,17 @@
     
     //约！
     _yuefan=[[UIButton alloc] init];
-    [_yuefan setBackgroundImage:[UIImage imageNamed:@"btn_yue"] forState:UIControlStateNormal];
+//    [_yuefan setBackgroundImage:[UIImage imageNamed:@"btn_yue"] forState:UIControlStateNormal];
+    
+    [_yuefan setTitle:@"猜" forState:UIControlStateNormal];
+    _yuefan.titleLabel.font=[UIFont boldSystemFontOfSize:35];
+    [_yuefan setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [_yuefan setBackgroundColor:[UIColor colorWithRed:225 green:225 blue:225 alpha:0.7]];
     _yuefan.frame=CGRectMake(0, 0, 80, 80);
+    _yuefan.layer.masksToBounds=YES;
+    _yuefan.layer.cornerRadius=40;
+    
+ 
     _yuefan.center=CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2+150);
     [_yuefan addTarget:self action:@selector(yuefanTouchDown) forControlEvents:UIControlEventTouchDown];
     [_yuefan addTarget:self action:@selector(yuefanTouchUp) forControlEvents:UIControlEventTouchCancel|UIControlEventTouchUpInside|UIControlEventTouchUpOutside];
@@ -127,7 +138,7 @@
 {
     _timer.fireDate=[NSDate distantFuture];
     
-    if (k>=3&&k<_avatarArray.count+3) {
+    if (k>=3&&k<7) {
         
         [self yuefanAction];
     }
@@ -183,7 +194,7 @@
             UIImageView * avatarView =[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
             
 
-            NSURL * avatarUrl =[NSURL URLWithString:[_yuefanListArray[i] AvatarUrl]];
+            NSURL * avatarUrl =[NSURL URLWithString:[_yuefanListArray[i] CoverUrl]];
             [avatarView sd_setImageWithURL:avatarUrl];
             
             avatarView.layer.masksToBounds=YES;
@@ -205,7 +216,7 @@
     //延时3个周期 开始显示小头像
     if (k>=3) {
         
-        if (k==_avatarArray.count+3) {
+        if (k==7) {
             [self yuefanAction];
             _timer.fireDate=[NSDate distantFuture];
             return;
@@ -243,7 +254,8 @@
 
     //延迟3秒
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        OKHomeListViewController * lvc =[[OKHomeListViewController alloc] init];
+//        OKHomeListViewController * lvc =[[OKHomeListViewController alloc] init];
+        OKFindShopHotShopViewController * hotViewController =[[OKFindShopHotShopViewController alloc] init];
         
         //添加动画
         CATransition * ani =[CATransition animation];
@@ -255,8 +267,9 @@
         ani.subtype=kCATransitionFromLeft;
         [self.navigationController.view.layer addAnimation:ani forKey:nil];
         
-        lvc.listModelArray=self.yuefanListArray;
-        [self.navigationController pushViewController:lvc animated:NO];
+//        lvc.listModelArray=self.yuefanListArray;
+        hotViewController.tips=@"猜你喜欢";
+        [self.navigationController pushViewController:hotViewController animated:NO];
     });
 }
 
@@ -296,41 +309,54 @@
         
         [self yuefanListArray];
     }
-    
+    else
+    {
+        UIAlertView * alert =[[UIAlertView alloc] initWithTitle:@"正在定位您的位置.." message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+        [alert show];
+        [alert dismissWithClickedButtonIndex:0 animated:YES];
+    }
     
 }
 
 -(NSMutableArray *)yuefanListArray
 {
-    if (_yuefanListArray==nil) {
-        _yuefanListArray=[[NSMutableArray alloc] init];
+    
+    
+    if (!_yuefanListArray) {
+        _yuefanListArray=[[NSMutableArray alloc]init];
+        
+        NSDictionary * para =@{@"cityid":@"2",
+                               @"limit":@"40",
+                               @"offset":@"0",
+                               @"sort":@"4",
+                               @"tips":@"随便吃吃"};
         
         AFHTTPSessionManager * manager =[AFHTTPSessionManager manager];
         
-        [manager GET:[NSString stringWithFormat:YUEFAN_URL,_lat,_lon] parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary * responseObject) {
+        [manager POST:HOT_SHOP_URL parameters:para success:^(NSURLSessionDataTask *task, NSDictionary * responseObject) {
             
-            NSMutableArray * tempArray = [NSMutableArray arrayWithCapacity:5];
             for (NSDictionary * itemDict in responseObject[@"result"][@"List"]) {
-                
-                OKYuefanListModel * model =[[OKYuefanListModel alloc]init];
-                [model setValuesForKeysWithDictionary:itemDict];
-                [tempArray addObject:model];
-//                 NSLog(@"%ld",[tempArray[0] Age]);
-                
+                OKFindShopHotShopModel * model =[[OKFindShopHotShopModel alloc]init];
+                model.dict=itemDict;
+             
+                [_yuefanListArray addObject:model];
             }
             
-            _yuefanListArray = tempArray;
-           
-        
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            NSLog(@"Yuefan Request err!");
+            NSLog(@"home suibianchichi request err!");
         }];
-
-        
     }
+
+    
     
     return _yuefanListArray;
 }
+
+
+
+
+
+
 
 
 
@@ -395,6 +421,7 @@
 {
     NSLog(@"location error \n %@",error);
 }
+
 
 
 - (void)didReceiveMemoryWarning {

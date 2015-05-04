@@ -32,10 +32,14 @@
     _limit=@(20);
     _offset=@(0);
 
-    [self requestData];
     self.view.backgroundColor=[UIColor whiteColor];
-    
+  
     self.title=_tips;
+    if ([_tips isEqualToString: @"猜你喜欢"]) {
+        _tips=@"随便吃吃";
+    }
+    [self requestData];
+
 }
 
 - (void)didReceiveMemoryWarning {
