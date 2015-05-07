@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,19 +14,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kxR-7h-1BN">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kxR-7h-1BN">
                         <rect key="frame" x="8" y="8" width="304" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="Zoa-ie-D6k"/>
+                        </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="choice_ico5.png" translatesAutoresizingMaskIntoConstraints="NO" id="jGa-om-7IC">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice_ico5.png" translatesAutoresizingMaskIntoConstraints="NO" id="jGa-om-7IC">
                         <rect key="frame" x="8" y="176" width="17" height="17"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykw-xx-gVl">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykw-xx-gVl">
                         <rect key="frame" x="33" y="177" width="279" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="279" id="YrS-ra-bHL"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="kxR-7h-1BN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="4gE-9Z-hpw"/>
+                    <constraint firstItem="kxR-7h-1BN" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="5rP-ed-lNc"/>
+                    <constraint firstItem="kxR-7h-1BN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="6JG-cw-z6H"/>
+                    <constraint firstItem="ykw-xx-gVl" firstAttribute="top" secondItem="kxR-7h-1BN" secondAttribute="bottom" constant="9" id="7m3-dB-bIH"/>
+                    <constraint firstItem="jGa-om-7IC" firstAttribute="top" secondItem="kxR-7h-1BN" secondAttribute="bottom" constant="8" symbolic="YES" id="MXp-up-5Dc"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ykw-xx-gVl" secondAttribute="bottom" constant="-7" id="gUu-hC-NHs"/>
+                    <constraint firstItem="kxR-7h-1BN" firstAttribute="trailing" secondItem="ykw-xx-gVl" secondAttribute="trailing" id="nD4-ZN-37o"/>
+                    <constraint firstItem="kxR-7h-1BN" firstAttribute="leading" secondItem="jGa-om-7IC" secondAttribute="leading" id="qRy-hP-NvC"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imageView1" destination="kxR-7h-1BN" id="dG8-N7-1ny"/>

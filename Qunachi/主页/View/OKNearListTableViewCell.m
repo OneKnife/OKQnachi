@@ -66,8 +66,12 @@
         self.vipRecomImageVIew.frame=vipFrame;
     }
     
+    CGRect addressLabelFrame = self.addressLabel.frame;
+    addressLabelFrame.size.width=SCREEN_WIDTH-150;
+    self.addressLabel.frame=addressLabelFrame;
+    
     self.addressLabel.text=_model.Address;
-    self.distanceLabel.text=[NSString stringWithFormat:@"%ld 米",_model.Distance];
+    self.distanceLabel.text=[NSString stringWithFormat:@"%ld 米",(long)_model.Distance];
     if(_model.AttrTasteRate==0)
     {
         self.attrTasteLabel.text=@"口味暂无";

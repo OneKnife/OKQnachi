@@ -67,7 +67,7 @@
                 <outlet property="shopNameLabel" destination="4zg-kB-c9A" id="UoF-me-9kG"/>
                 <outlet property="vipRecomImageVIew" destination="RbG-aj-0hO" id="Jyj-ap-UwJ"/>
             </connections>
-            <point key="canvasLocation" x="167" y="304"/>
+            <point key="canvasLocation" x="14" y="221"/>
         </tableViewCell>
     </objects>
     <resources>

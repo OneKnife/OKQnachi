@@ -28,6 +28,10 @@
 - (void)awakeFromNib {
     // Initialization code
     
+    CGRect addressFrame = self.addressLabel.frame;
+    addressFrame.size.width=SCREEN_WIDTH-100;
+    self.addressLabel.frame=addressFrame;
+    
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 

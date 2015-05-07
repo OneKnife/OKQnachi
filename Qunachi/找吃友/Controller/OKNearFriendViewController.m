@@ -72,6 +72,15 @@
     CGFloat lat = [user floatForKey:@"lat"];
     CGFloat lon = [user floatForKey:@"lon"];
     
+    if (!lat) {
+        
+        UIAlertView * alert =[[UIAlertView alloc] initWithTitle:@"没有找到您的位置" message:@"请确认您的定位是否打开" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        [_tableView.header beginRefreshing];
+        return;
+    }
+    
+    
     [manager GET:[NSString stringWithFormat:NEAR_FRIEND_URL,lat,lon,_offset] parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary * responseObject) {
       
         if (!_isUpTowordRefush) {
@@ -131,12 +140,19 @@
         web.webView.frame=CGRectMake(0, -54, SCREEN_WIDTH, SCREEN_HEIGHT+60);
         [self.navigationController pushViewController:web animated:YES];
     }
-    if ([[_dataArray[indexPath.row] LastAct] Type].intValue==1) {
+    else if ([[_dataArray[indexPath.row] LastAct] Type].intValue==1) {
         OKShareFoodViewController * shareFood = [[OKShareFoodViewController alloc] init];
         shareFood.shareId=[[_dataArray[indexPath.row] LastAct] ItemId];
         [self.navigationController pushViewController:shareFood animated:YES];
     }
-    
+    else
+    {
+        UIAlertView * alert =[[UIAlertView alloc] initWithTitle:@"该用户没有推荐任何美食和探店" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+        
+        
+        [alert show];
+        [alert dismissWithClickedButtonIndex:0 animated:YES];
+    }
     
 }
 

@@ -34,9 +34,11 @@
 -(void)createTableView
 {
     self.automaticallyAdjustsScrollViewInsets=NO;
-    _tableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
+    _tableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
+    
+    _tableView.contentInset=UIEdgeInsetsMake(0, 0, 100, 0);
     
     [self.view addSubview:_tableView];
 }

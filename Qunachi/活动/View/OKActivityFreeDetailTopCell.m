@@ -28,6 +28,8 @@
     self.statueButton.layer.borderColor=[UIColor grayColor].CGColor;
     self.statueButton.layer.borderWidth=1;
     
+    
+    self.selectionStyle=UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

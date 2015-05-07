@@ -95,7 +95,7 @@
     else
     {
         self.recommentLabel.hidden=NO;
-        self.recommentLabel.text=[NSString stringWithFormat:@"推荐 %ld",_model.RecommendCount];
+        self.recommentLabel.text=[NSString stringWithFormat:@"推荐 %ld",(long)_model.RecommendCount];
     }
     
     

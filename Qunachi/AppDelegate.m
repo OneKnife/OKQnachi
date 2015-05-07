@@ -44,16 +44,16 @@
   
     
     
-    NSString * imageFile = [[OKTools returnDocumentsPath] stringByAppendingPathComponent:WELCOME_IMAGE_NAME];
-    
-    if ([OKTools fileisExitWithFileName:imageFile]) {
-        self.window.rootViewController=[[OKWelcomeViewController alloc] init];
-    }
-    else
-    {
+//    NSString * imageFile = [[OKTools returnDocumentsPath] stringByAppendingPathComponent:WELCOME_IMAGE_NAME];
+//    
+//    if ([OKTools fileisExitWithFileName:imageFile]) {
+//        self.window.rootViewController=[[OKWelcomeViewController alloc] init];
+//    }
+//    else
+//    {
         OKTabbarController * tabbarController=[[OKTabbarController alloc] init];
         self.window.rootViewController=tabbarController;
-    }
+//    }
     
    
     

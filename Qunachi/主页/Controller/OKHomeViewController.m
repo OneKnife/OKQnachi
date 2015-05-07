@@ -50,10 +50,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    k=-1;
+    
     [self createUI];
     [self createTimer];
     //下载欢迎页面图片
-    [self requestWelcomePage];
+//    [self requestWelcomePage];
     //获取定位
     [self getLocation];
     
@@ -83,21 +86,49 @@
     
     
     //主页中间文字
-    UIImageView * textView =[[UIImageView alloc]init];
-    UIImage * textImage = [UIImage imageNamed:@"text_1"];
-    textView.image=textImage;
-    textView.frame=(CGRect){0,0,textImage.size};
-    textView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2-50);
-    [self.view addSubview:textView];
+//    UIImageView * textView =[[UIImageView alloc]init];
+//    UIImage * textImage = [UIImage imageNamed:@"text_1"];
+//    textView.image=textImage;
+//    textView.frame=(CGRect){0,0,textImage.size};
+//    textView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2-50);
+//    [self.view addSubview:textView];
+//    
     
+    UILabel * topLabel =[[UILabel alloc]initWithFrame:(CGRect){0,0,200,40}];
+    topLabel.text=@"去哪吃饭呀？";
+    topLabel.textColor=[UIColor whiteColor];
+    topLabel.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2-70);
+    topLabel.font=[UIFont fontWithName:@"Courier-Oblique" size:17];
+    topLabel.alpha=0.7;
+    topLabel.textAlignment=NSTextAlignmentCenter;
+    [self.view addSubview:topLabel];
+    
+    UILabel * secondLabel =[[UILabel alloc]initWithFrame:(CGRect){0,0,220,40}];
+    secondLabel.text=@"嗯..看看有什么好吃的吧！";
+    secondLabel.textColor=[UIColor whiteColor];
+    secondLabel.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2-20);
+    secondLabel.font=[UIFont fontWithName:@"Courier-Oblique" size:17];
+    secondLabel.alpha=0.7;
+    secondLabel.textAlignment=NSTextAlignmentCenter;
+    [self.view addSubview:secondLabel];
     
     //长按搜索附近的约饭
-    UIImageView * tipView =[[UIImageView alloc]init];
-    UIImage * tipImage = [UIImage imageNamed:@"text_2"];
-    tipView.image=tipImage;
-    tipView.frame=(CGRect){0,0,tipImage.size};
-    tipView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2+100);
-    [self.view addSubview:tipView];
+//    UIImageView * tipView =[[UIImageView alloc]init];
+//    UIImage * tipImage = [UIImage imageNamed:@"text_2"];
+//    tipView.image=tipImage;
+//    tipView.frame=(CGRect){0,0,tipImage.size};
+//    tipView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2+100);
+//    [self.view addSubview:tipView];
+    
+    
+    UILabel * tipLabel =[[UILabel alloc]initWithFrame:(CGRect){0,0,200,40}];
+    tipLabel.text=@"长按猜你喜欢的饭店";
+    tipLabel.textColor=[UIColor whiteColor];
+    tipLabel.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2+100);
+    tipLabel.font=[UIFont fontWithName:@"Courier-Oblique" size:14];
+    tipLabel.alpha=0.4;
+    tipLabel.textAlignment=NSTextAlignmentCenter;
+    [self.view addSubview:tipLabel];
     
     
     //约！
@@ -144,7 +175,7 @@
     }
     
     //周期数归零
-    k=0;
+    k=-1;
 }
 
 
@@ -181,6 +212,8 @@
 //显示小头像
 -(void)showAvatar
 {
+    
+    k++;
     if (_avatarArray==nil) {
         _avatarArray=[[NSMutableArray alloc] init];
     }
@@ -233,7 +266,7 @@
         
         
     }
-    k++;
+    
 }
 
 //显示约饭界面
@@ -311,7 +344,7 @@
     }
     else
     {
-        UIAlertView * alert =[[UIAlertView alloc] initWithTitle:@"正在定位您的位置.." message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+        UIAlertView * alert =[[UIAlertView alloc] initWithTitle:@"别心急,正在定位呢.." message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
         [alert show];
         [alert dismissWithClickedButtonIndex:0 animated:YES];
     }

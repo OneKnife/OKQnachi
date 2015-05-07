@@ -25,6 +25,9 @@
 - (void)awakeFromNib {
     // Initialization code
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    self.bigImageView.frame=CGRectMake(8, 47, SCREEN_WIDTH-16, 175);
+    
 }
 
 -(void)setModel:(OKShopShareFoodModel *)model

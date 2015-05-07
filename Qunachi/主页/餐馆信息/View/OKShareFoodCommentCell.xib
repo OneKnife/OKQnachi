@@ -38,10 +38,6 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="answer_ico.png" id="k0Y-G2-gxE">
-                        <rect key="frame" x="284" y="11" width="15" height="12"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
@@ -53,9 +49,6 @@
             <point key="canvasLocation" x="315" y="259"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="answer_ico.png" width="15" height="12"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
